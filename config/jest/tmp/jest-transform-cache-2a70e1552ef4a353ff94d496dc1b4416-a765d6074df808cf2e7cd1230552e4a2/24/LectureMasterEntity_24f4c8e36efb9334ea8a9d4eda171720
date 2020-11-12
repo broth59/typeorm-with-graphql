@@ -1,0 +1,150 @@
+7fb3302a5839249508932899fd22d7a8
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __decorate = void 0 && (void 0).__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var __metadata = void 0 && (void 0).__metadata || function (k, v) {
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LectureEntity = void 0;
+
+var typeorm_1 = require("typeorm");
+
+var type_graphql_1 = require("type-graphql");
+
+var LectureContentEntity_1 = __importDefault(require("./LectureContentEntity"));
+
+var LectureEntity = /*#__PURE__*/function () {
+  function LectureEntity(_ref) {
+    var content_no = _ref.content_no,
+        upper_content_no = _ref.upper_content_no,
+        content_title = _ref.content_title,
+        title_image_path = _ref.title_image_path,
+        content_regist_date = _ref.content_regist_date,
+        content_outline = _ref.content_outline,
+        lecture_detail = _ref.lecture_detail;
+
+    _classCallCheck(this, LectureEntity);
+
+    this.content_no = content_no;
+    this.upper_content_no = upper_content_no;
+    this.content_title = content_title;
+    this.title_image_path = title_image_path;
+    this.content_regist_date = content_regist_date;
+    this.content_outline = content_outline;
+    this.lecture_detail = lecture_detail;
+  }
+
+  _createClass(LectureEntity, [{
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return LectureEntity;
+}();
+
+__decorate([typeorm_1.PrimaryGeneratedColumn({
+  name: 'CONTENT_NO'
+}), type_graphql_1.Field(function () {
+  return type_graphql_1.ID;
+}), __metadata("design:type", String)], LectureEntity.prototype, "content_no", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'UPPER_CONTENT_NO'
+}), type_graphql_1.Field(function () {
+  return String;
+}), __metadata("design:type", String)], LectureEntity.prototype, "upper_content_no", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'CONTENT_TITLE'
+}), type_graphql_1.Field(function () {
+  return String;
+}), __metadata("design:type", String)], LectureEntity.prototype, "content_title", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'CONTENT_REGIST_DATE'
+}), type_graphql_1.Field(), __metadata("design:type", Date)], LectureEntity.prototype, "content_regist_date", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'TITLE_IMAGE_PATH'
+}), type_graphql_1.Field(function () {
+  return String;
+}), __metadata("design:type", String)], LectureEntity.prototype, "title_image_path", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'CONTENT_OUTLINE'
+}), type_graphql_1.Field(function () {
+  return String;
+}), __metadata("design:type", String)], LectureEntity.prototype, "content_outline", void 0);
+
+__decorate([typeorm_1.OneToOne(function () {
+  return LectureContentEntity_1["default"];
+}), typeorm_1.JoinColumn(), __metadata("design:type", LectureContentEntity_1["default"])], LectureEntity.prototype, "lecture_detail", void 0);
+
+LectureEntity = __decorate([typeorm_1.Entity({
+  name: 'TB_LECTURE_MASTER'
+}), type_graphql_1.ObjectType(), __metadata("design:paramtypes", [LectureEntity])], LectureEntity);
+exports["default"] = LectureEntity;
+exports.LectureEntity = LectureEntity;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__decorate, "__decorate", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureEntity.ts");
+  reactHotLoader.register(__metadata, "__metadata", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureEntity.ts");
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureEntity.ts");
+  reactHotLoader.register(LectureContentEntity_1, "LectureContentEntity_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureEntity.ts");
+  reactHotLoader.register(LectureEntity, "LectureEntity", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureEntity.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9pbnRlcmZhY2UvZW50aXR5L0xlY3R1cmVNYXN0ZXJFbnRpdHkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFNBQUEsR0FBQSxPQUFBLENBQUEsU0FBQSxDQUFBOztBQUNBLElBQUEsY0FBQSxHQUFBLE9BQUEsQ0FBQSxjQUFBLENBQUE7O0FBQ0EsSUFBQSxxQkFBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsdUJBQUEsQ0FBQSxDQUFBOztBQUlBLElBQXFCLG1CQUFyQjtBQWdDQyxxQ0FLc0I7QUFBQSxRQUpyQixVQUlxQixRQUpyQixVQUlxQjtBQUFBLFFBSlQsZ0JBSVMsUUFKVCxnQkFJUztBQUFBLFFBSHJCLGFBR3FCLFFBSHJCLGFBR3FCO0FBQUEsUUFITCxnQkFHSyxRQUhMLGdCQUdLO0FBQUEsUUFIYSxtQkFHYixRQUhhLG1CQUdiO0FBQUEsUUFGckIsZUFFcUIsUUFGckIsZUFFcUI7QUFBQSxRQURyQixjQUNxQixRQURyQixjQUNxQjs7QUFBQTs7QUFDckIsU0FBSyxVQUFMLEdBQWtCLFVBQWxCO0FBQ0EsU0FBSyxnQkFBTCxHQUF3QixnQkFBeEI7QUFDQSxTQUFLLGFBQUwsR0FBcUIsYUFBckI7QUFDQSxTQUFLLGdCQUFMLEdBQXdCLGdCQUF4QjtBQUNBLFNBQUssbUJBQUwsR0FBMkIsbUJBQTNCO0FBQ0EsU0FBSyxlQUFMLEdBQXVCLGVBQXZCO0FBQ0EsU0FBSyxjQUFMLEdBQXNCLGNBQXRCO0FBQ0E7O0FBN0NGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7O0FBQUE7QUFBQSxHQUFBOztBQUlDLFVBQUEsQ0FBQSxDQUZDLFNBQUEsQ0FBQSxzQkFBQSxDQUF1QjtBQUFFLEVBQUEsSUFBSSxFQUFFO0FBQVIsQ0FBdkIsQ0FFRCxFQURDLGNBQUEsQ0FBQSxLQUFBLENBQU07QUFBQSxTQUFJLGNBQUEsQ0FBQSxFQUFKO0FBQUEsQ0FBTixDQUNELEUsaUNBQUEsQ0FBQSxFLDZCQUFBLEUsWUFBQSxFLEtBQW1CLENBQW5CLENBQUE7O0FBSUEsVUFBQSxDQUFBLENBRkMsU0FBQSxDQUFBLE1BQUEsQ0FBTztBQUFFLEVBQUEsSUFBSSxFQUFFO0FBQVIsQ0FBUCxDQUVELEVBREMsY0FBQSxDQUFBLEtBQUEsQ0FBTTtBQUFBLFNBQUksTUFBSjtBQUFBLENBQU4sQ0FDRCxFLGlDQUFBLENBQUEsRSw2QkFBQSxFLGtCQUFBLEUsS0FBeUIsQ0FBekIsQ0FBQTs7QUFJQSxVQUFBLENBQUEsQ0FGQyxTQUFBLENBQUEsTUFBQSxDQUFPO0FBQUUsRUFBQSxJQUFJLEVBQUU7QUFBUixDQUFQLENBRUQsRUFEQyxjQUFBLENBQUEsS0FBQSxDQUFNO0FBQUEsU0FBSSxNQUFKO0FBQUEsQ0FBTixDQUNELEUsaUNBQUEsQ0FBQSxFLDZCQUFBLEUsZUFBQSxFLEtBQXNCLENBQXRCLENBQUE7O0FBSUEsVUFBQSxDQUFBLENBRkMsU0FBQSxDQUFBLE1BQUEsQ0FBTztBQUFFLEVBQUEsSUFBSSxFQUFFO0FBQVIsQ0FBUCxDQUVELEVBREMsY0FBQSxDQUFBLEtBQUEsRUFDRCxFLDBCQUFzQixJLENBQXRCLENBQUEsRSw2QkFBQSxFLHFCQUFBLEUsS0FBMEIsQ0FBMUIsQ0FBQTs7QUFJQSxVQUFBLENBQUEsQ0FGQyxTQUFBLENBQUEsTUFBQSxDQUFPO0FBQUUsRUFBQSxJQUFJLEVBQUU7QUFBUixDQUFQLENBRUQsRUFEQyxjQUFBLENBQUEsS0FBQSxDQUFNO0FBQUEsU0FBSSxNQUFKO0FBQUEsQ0FBTixDQUNELEUsaUNBQUEsQ0FBQSxFLDZCQUFBLEUsa0JBQUEsRSxLQUF5QixDQUF6QixDQUFBOztBQUlBLFVBQUEsQ0FBQSxDQUZDLFNBQUEsQ0FBQSxNQUFBLENBQU87QUFBRSxFQUFBLElBQUksRUFBRTtBQUFSLENBQVAsQ0FFRCxFQURDLGNBQUEsQ0FBQSxLQUFBLENBQU07QUFBQSxTQUFJLE1BQUo7QUFBQSxDQUFOLENBQ0QsRSxpQ0FBQSxDQUFBLEUsNkJBQUEsRSxpQkFBQSxFLEtBQXdCLENBQXhCLENBQUE7O0FBSUEsVUFBQSxDQUFBLENBRkMsU0FBQSxDQUFBLFFBQUEsQ0FBUztBQUFBLFNBQUkscUJBQUEsV0FBSjtBQUFBLENBQVQsQ0FFRCxFQURDLFNBQUEsQ0FBQSxVQUFBLEVBQ0QsRSwwQkFBaUIscUJBQUEsVyxDQUFqQixDQUFBLEUsNkJBQUEsRSxnQkFBQSxFLEtBQW9DLENBQXBDLENBQUE7O0FBNUJvQixtQkFBbUIsR0FBQSxVQUFBLENBQUEsQ0FGdkMsU0FBQSxDQUFBLE1BQUEsQ0FBTztBQUFFLEVBQUEsSUFBSSxFQUFFO0FBQVIsQ0FBUCxDQUV1QyxFQUR2QyxjQUFBLENBQUEsVUFBQSxFQUN1QyxFLGlDQXFDcEMsbUIsRUFyQ29DLENBQUEsRUFBbkIsbUJBQW1CLENBQW5CO3FCQUFBLG1CO0FBZ0RaLE9BQUEsQ0FBQSxtQkFBQSxHQUFBLG1CQUFBOzs7Ozs7Ozs7Ozs7OzBCQXBEVCxxQjswQkFJcUIsbUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBFbnRpdHksIENvbHVtbiwgUHJpbWFyeUdlbmVyYXRlZENvbHVtbiwgT25lVG9PbmUsIEpvaW5Db2x1bW4gIH0gZnJvbSAndHlwZW9ybSdcbmltcG9ydCB7IE9iamVjdFR5cGUsIEZpZWxkLCBJRCB9IGZyb20gXCJ0eXBlLWdyYXBocWxcIjtcbmltcG9ydCBMZWN0dXJlRGV0YWlsRW50aXR5IGZyb20gJy4vTGVjdHVyZURldGFpbEVudGl0eSc7XG5cbkBFbnRpdHkoeyBuYW1lOiAnVEJfTEVDVFVSRV9NQVNURVInIH0pXG5AT2JqZWN0VHlwZSgpXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBMZWN0dXJlTWFzdGVyRW50aXR5IHtcblx0XG5cdEBQcmltYXJ5R2VuZXJhdGVkQ29sdW1uKHsgbmFtZTogJ0NPTlRFTlRfTk8nIH0pXG5cdEBGaWVsZCgoKT0+SUQpXG5cdGNvbnRlbnRfbm8/OiBzdHJpbmdcblxuXHRAQ29sdW1uKHsgbmFtZTogJ1VQUEVSX0NPTlRFTlRfTk8nIH0pXG5cdEBGaWVsZCgoKT0+U3RyaW5nKVxuXHR1cHBlcl9jb250ZW50X25vPzogc3RyaW5nXG5cblx0QENvbHVtbih7IG5hbWU6ICdDT05URU5UX1RJVExFJyB9KVxuXHRARmllbGQoKCk9PlN0cmluZylcblx0Y29udGVudF90aXRsZT86IHN0cmluZ1xuXG5cdEBDb2x1bW4oeyBuYW1lOiAnQ09OVEVOVF9SRUdJU1RfREFURScgfSlcblx0QEZpZWxkKClcblx0Y29udGVudF9yZWdpc3RfZGF0ZT86IERhdGVcblxuXHRAQ29sdW1uKHsgbmFtZTogJ1RJVExFX0lNQUdFX1BBVEgnIH0pXG5cdEBGaWVsZCgoKT0+U3RyaW5nKVxuXHR0aXRsZV9pbWFnZV9wYXRoPzogc3RyaW5nXG5cblx0QENvbHVtbih7IG5hbWU6ICdDT05URU5UX09VVExJTkUnIH0pXG5cdEBGaWVsZCgoKT0+U3RyaW5nKVxuXHRjb250ZW50X291dGxpbmU/OiBzdHJpbmdcblxuXHRAT25lVG9PbmUoKCk9PkxlY3R1cmVEZXRhaWxFbnRpdHkpXG5cdEBKb2luQ29sdW1uKClcblx0bGVjdHVyZV9kZXRhaWw/OiBMZWN0dXJlRGV0YWlsRW50aXR5XG5cdFxuXG5cblx0Y29uc3RydWN0b3Ioe1xuXHRcdGNvbnRlbnRfbm8sIHVwcGVyX2NvbnRlbnRfbm8sIFxuXHRcdGNvbnRlbnRfdGl0bGUsICB0aXRsZV9pbWFnZV9wYXRoLCBjb250ZW50X3JlZ2lzdF9kYXRlLFxuXHRcdGNvbnRlbnRfb3V0bGluZSwgXG5cdFx0bGVjdHVyZV9kZXRhaWwsXG5cdH06IExlY3R1cmVNYXN0ZXJFbnRpdHkpe1xuXHRcdHRoaXMuY29udGVudF9ubyA9IGNvbnRlbnRfbm8gXG5cdFx0dGhpcy51cHBlcl9jb250ZW50X25vID0gdXBwZXJfY29udGVudF9ubyBcblx0XHR0aGlzLmNvbnRlbnRfdGl0bGUgPSBjb250ZW50X3RpdGxlICBcblx0XHR0aGlzLnRpdGxlX2ltYWdlX3BhdGggPSB0aXRsZV9pbWFnZV9wYXRoIFxuXHRcdHRoaXMuY29udGVudF9yZWdpc3RfZGF0ZSA9IGNvbnRlbnRfcmVnaXN0X2RhdGUgXG5cdFx0dGhpcy5jb250ZW50X291dGxpbmUgPSBjb250ZW50X291dGxpbmUgIFx0XHRcblx0XHR0aGlzLmxlY3R1cmVfZGV0YWlsID0gbGVjdHVyZV9kZXRhaWxcblx0fVxufVxuXG5leHBvcnQgeyBMZWN0dXJlTWFzdGVyRW50aXR5IH0iXX0=

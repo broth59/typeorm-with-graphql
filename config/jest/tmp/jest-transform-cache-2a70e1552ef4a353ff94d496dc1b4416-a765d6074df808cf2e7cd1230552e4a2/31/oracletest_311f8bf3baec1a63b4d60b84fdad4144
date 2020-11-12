@@ -1,0 +1,91 @@
+4bc1df249e234f411546caaaad6dadba
+"use strict";
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+}); //bootstrap
+
+var bootstrap_1 = require("@server/bootstrap");
+
+var env_1 = require("@config/env");
+
+var client_1 = require("@apollo/client");
+
+require("babel-polyfill"); // beforeAll(async ()=>{
+// })
+
+
+describe('Oracle db connection', function () {
+  it('connect', /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(done) {
+      var _yield$bootstrap_1$Co, _yield$bootstrap_1$Co2, app, apollo, client;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return bootstrap_1.Container.getValue(env_1.ENVKEY.SERVER.EXPRESS.APP)();
+
+            case 2:
+              _yield$bootstrap_1$Co = _context.sent;
+              _yield$bootstrap_1$Co2 = _slicedToArray(_yield$bootstrap_1$Co, 2);
+              app = _yield$bootstrap_1$Co2[0];
+              apollo = _yield$bootstrap_1$Co2[1];
+              client = new client_1.ApolloClient({
+                uri: 'https://48p1r2roz4.sse.codesandbox.io',
+                cache: new client_1.InMemoryCache()
+              }); // await client
+              // .query({
+              // 	query: gql`
+              // 		query GetRates {
+              // 			rates(currency: "USD") {
+              // 			currency
+              // 			}
+              // 		}
+              // 	`
+              // 	,
+              // 	variables: {
+              // 	}
+              // })
+              // .then(result => console.log(result));
+              // const LECUTRE = gql`
+              // 	query lectures {
+              // 		cotent_no
+              // 	}
+              // `
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }(), 20000);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3Rlc3Qvc2VydmVyL29yYWNsZS50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUFBOztBQUNBLElBQUEsV0FBQSxHQUFBLE9BQUEsQ0FBQSxtQkFBQSxDQUFBOztBQUNBLElBQUEsS0FBQSxHQUFBLE9BQUEsQ0FBQSxhQUFBLENBQUE7O0FBSUEsSUFBQSxRQUFBLEdBQUEsT0FBQSxDQUFBLGdCQUFBLENBQUE7O0FBQ0EsT0FBQSxDQUFBLGdCQUFBLENBQUEsQyxDQUVBO0FBRUE7OztBQUdBLFFBQVEsQ0FBQyxzQkFBRCxFQUF5QixZQUFJO0FBRXBDLEVBQUEsRUFBRSxDQUFDLFNBQUQ7QUFBQSx1RUFBWSxpQkFBTyxJQUFQO0FBQUE7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUN1QyxXQUFBLENBQUEsU0FBQSxDQUFVLFFBQVYsQ0FBbUIsS0FBQSxDQUFBLE1BQUEsQ0FBTyxNQUFQLENBQWMsT0FBZCxDQUFzQixHQUF6QyxHQUR2Qzs7QUFBQTtBQUFBO0FBQUE7QUFDTixjQUFBLEdBRE07QUFDRCxjQUFBLE1BREM7QUFFUCxjQUFBLE1BRk8sR0FFRSxJQUFJLFFBQUEsQ0FBQSxZQUFKLENBQWlCO0FBQy9CLGdCQUFBLEdBQUcsRUFBRSx1Q0FEMEI7QUFFL0IsZ0JBQUEsS0FBSyxFQUFFLElBQUksUUFBQSxDQUFBLGFBQUo7QUFGd0IsZUFBakIsQ0FGRixFQU1iO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQXpCYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUFaOztBQUFBO0FBQUE7QUFBQTtBQUFBLE9BMkJDLEtBM0JELENBQUY7QUE2QkEsQ0EvQk8sQ0FBUiIsInNvdXJjZXNDb250ZW50IjpbIi8vYm9vdHN0cmFwXG5pbXBvcnQgeyBDb250YWluZXIgfSBmcm9tICdAc2VydmVyL2Jvb3RzdHJhcCdcbmltcG9ydCB7IEVOVktFWSB9IGZyb20gJ0Bjb25maWcvZW52J1xuLy9tb2R1bGVcbmltcG9ydCB7IEV4cHJlc3MgfSBmcm9tICdleHByZXNzJ1xuaW1wb3J0IHsgQXBvbGxvU2VydmVyIH0gZnJvbSAnQGFwb2xsby9zZXJ2ZXInXG5pbXBvcnQgeyBBcG9sbG9DbGllbnQsIEluTWVtb3J5Q2FjaGUsIGdxbCB9IGZyb20gJ0BhcG9sbG8vY2xpZW50J1xuaW1wb3J0ICdiYWJlbC1wb2x5ZmlsbCdcblxuLy8gYmVmb3JlQWxsKGFzeW5jICgpPT57XG5cdFxuLy8gfSlcblxuXG5kZXNjcmliZSgnT3JhY2xlIGRiIGNvbm5lY3Rpb24nLCAoKT0+e1xuXHRcblx0aXQoJ2Nvbm5lY3QnLCBhc3luYyAoZG9uZSk9Pntcblx0XHRjb25zdCBbYXBwLCBhcG9sbG9dOltFeHByZXNzLCBBcG9sbG9TZXJ2ZXJdID0gYXdhaXQgQ29udGFpbmVyLmdldFZhbHVlKEVOVktFWS5TRVJWRVIuRVhQUkVTUy5BUFApKClcblx0XHRjb25zdCBjbGllbnQgPSBuZXcgQXBvbGxvQ2xpZW50KHtcblx0XHRcdHVyaTogJ2h0dHBzOi8vNDhwMXIycm96NC5zc2UuY29kZXNhbmRib3guaW8nLFxuXHRcdFx0Y2FjaGU6IG5ldyBJbk1lbW9yeUNhY2hlKClcblx0XHR9KTtcdFx0XG5cdFx0Ly8gYXdhaXQgY2xpZW50XG5cdFx0Ly8gLnF1ZXJ5KHtcblx0XHQvLyBcdHF1ZXJ5OiBncWxgXG5cdFx0Ly8gXHRcdHF1ZXJ5IEdldFJhdGVzIHtcblx0XHQvLyBcdFx0XHRyYXRlcyhjdXJyZW5jeTogXCJVU0RcIikge1xuXHRcdC8vIFx0XHRcdGN1cnJlbmN5XG5cdFx0Ly8gXHRcdFx0fVxuXHRcdC8vIFx0XHR9XG5cdFx0Ly8gXHRgXG5cdFx0Ly8gXHQsXG5cdFx0Ly8gXHR2YXJpYWJsZXM6IHtcblx0XHRcdFx0XG5cdFx0Ly8gXHR9XG5cdFx0Ly8gfSlcblx0XHQvLyAudGhlbihyZXN1bHQgPT4gY29uc29sZS5sb2cocmVzdWx0KSk7XG5cdFx0Ly8gY29uc3QgTEVDVVRSRSA9IGdxbGBcblx0XHQvLyBcdHF1ZXJ5IGxlY3R1cmVzIHtcblx0XHQvLyBcdFx0Y290ZW50X25vXG5cdFx0Ly8gXHR9XG5cdFx0Ly8gYFxuIFx0XG5cdH0sIDIwMDAwKVxuXG59KSJdfQ==

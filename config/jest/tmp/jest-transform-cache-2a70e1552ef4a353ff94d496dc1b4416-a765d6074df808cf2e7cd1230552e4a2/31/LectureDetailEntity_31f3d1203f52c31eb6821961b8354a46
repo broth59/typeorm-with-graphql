@@ -1,0 +1,105 @@
+43e489e7657d34edaafbd99242bcd4ec
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __decorate = void 0 && (void 0).__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var __metadata = void 0 && (void 0).__metadata || function (k, v) {
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LectureContentEntity = void 0;
+
+var typeorm_1 = require("typeorm");
+
+var type_graphql_1 = require("type-graphql");
+
+var LectureContentEntity = /*#__PURE__*/function () {
+  function LectureContentEntity(_ref) {
+    var content_no = _ref.content_no,
+        contents = _ref.contents;
+
+    _classCallCheck(this, LectureContentEntity);
+
+    this.content_no = content_no;
+    this.contents = contents;
+  }
+
+  _createClass(LectureContentEntity, [{
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return LectureContentEntity;
+}();
+
+__decorate([typeorm_1.PrimaryColumn({
+  name: 'CONTENT_NO'
+}), type_graphql_1.Field(function () {
+  return type_graphql_1.ID;
+}), __metadata("design:type", String)], LectureContentEntity.prototype, "content_no", void 0);
+
+__decorate([typeorm_1.Column({
+  name: 'CONTENTS',
+  type: 'clob'
+}), type_graphql_1.Field(function () {
+  return String;
+}), __metadata("design:type", String)], LectureContentEntity.prototype, "contents", void 0);
+
+LectureContentEntity = __decorate([typeorm_1.Entity({
+  name: 'TB_LECTURE_DETAIL'
+}), type_graphql_1.ObjectType(), __metadata("design:paramtypes", [LectureContentEntity])], LectureContentEntity);
+exports["default"] = LectureContentEntity;
+exports.LectureContentEntity = LectureContentEntity;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__decorate, "__decorate", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureContentEntity.ts");
+  reactHotLoader.register(__metadata, "__metadata", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureContentEntity.ts");
+  reactHotLoader.register(LectureContentEntity, "LectureContentEntity", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/interface/entity/LectureContentEntity.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9pbnRlcmZhY2UvZW50aXR5L0xlY3R1cmVEZXRhaWxFbnRpdHkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFNBQUEsR0FBQSxPQUFBLENBQUEsU0FBQSxDQUFBOztBQUNBLElBQUEsY0FBQSxHQUFBLE9BQUEsQ0FBQSxjQUFBLENBQUE7O0FBSUEsSUFBcUIsbUJBQXJCO0FBVUMscUNBR3FCO0FBQUEsUUFGcEIsVUFFb0IsUUFGcEIsVUFFb0I7QUFBQSxRQURwQixRQUNvQixRQURwQixRQUNvQjs7QUFBQTs7QUFDcEIsU0FBSyxVQUFMLEdBQWtCLFVBQWxCO0FBQ0EsU0FBSyxRQUFMLEdBQWdCLFFBQWhCO0FBQ0E7O0FBaEJGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7O0FBQUE7QUFBQSxHQUFBOztBQUlDLFVBQUEsQ0FBQSxDQUZDLFNBQUEsQ0FBQSxhQUFBLENBQWM7QUFBRSxFQUFBLElBQUksRUFBRTtBQUFSLENBQWQsQ0FFRCxFQURDLGNBQUEsQ0FBQSxLQUFBLENBQU07QUFBQSxTQUFJLGNBQUEsQ0FBQSxFQUFKO0FBQUEsQ0FBTixDQUNELEUsaUNBQUEsQ0FBQSxFLDZCQUFBLEUsWUFBQSxFLEtBQW1CLENBQW5CLENBQUE7O0FBSUEsVUFBQSxDQUFBLENBRkMsU0FBQSxDQUFBLE1BQUEsQ0FBTztBQUFFLEVBQUEsSUFBSSxFQUFFLFVBQVI7QUFBb0IsRUFBQSxJQUFJLEVBQUU7QUFBMUIsQ0FBUCxDQUVELEVBREMsY0FBQSxDQUFBLEtBQUEsQ0FBTTtBQUFBLFNBQUksTUFBSjtBQUFBLENBQU4sQ0FDRCxFLGlDQUFBLENBQUEsRSw2QkFBQSxFLFVBQUEsRSxLQUFpQixDQUFqQixDQUFBOztBQVJvQixtQkFBbUIsR0FBQSxVQUFBLENBQUEsQ0FGdkMsU0FBQSxDQUFBLE1BQUEsQ0FBTztBQUFFLEVBQUEsSUFBSSxFQUFFO0FBQVIsQ0FBUCxDQUV1QyxFQUR2QyxjQUFBLENBQUEsVUFBQSxFQUN1QyxFLGlDQWFyQyxtQixFQWJxQyxDQUFBLEVBQW5CLG1CQUFtQixDQUFuQjtxQkFBQSxtQjtBQW1CWixPQUFBLENBQUEsbUJBQUEsR0FBQSxtQkFBQTs7Ozs7Ozs7Ozs7OzBCQW5CWSxtQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEVudGl0eSwgQ29sdW1uLCBQcmltYXJ5Q29sdW1uIH0gZnJvbSAndHlwZW9ybSdcbmltcG9ydCB7IE9iamVjdFR5cGUsIEZpZWxkLCBJRCB9IGZyb20gXCJ0eXBlLWdyYXBocWxcIjtcblxuQEVudGl0eSh7IG5hbWU6ICdUQl9MRUNUVVJFX0RFVEFJTCcgfSlcbkBPYmplY3RUeXBlKClcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIExlY3R1cmVEZXRhaWxFbnRpdHkge1xuXHRcblx0QFByaW1hcnlDb2x1bW4oeyBuYW1lOiAnQ09OVEVOVF9OTycgfSlcblx0QEZpZWxkKCgpPT5JRClcblx0Y29udGVudF9ubz86IHN0cmluZ1xuXG5cdEBDb2x1bW4oeyBuYW1lOiAnQ09OVEVOVFMnLCB0eXBlOiAnY2xvYicgfSlcblx0QEZpZWxkKCgpPT5TdHJpbmcpXG5cdGNvbnRlbnRzPzogc3RyaW5nXG5cblx0Y29uc3RydWN0b3Ioe1xuXHRcdGNvbnRlbnRfbm8sIFxuXHRcdGNvbnRlbnRzIFxuXHR9OkxlY3R1cmVEZXRhaWxFbnRpdHkpe1xuXHRcdHRoaXMuY29udGVudF9ubyA9IGNvbnRlbnRfbm8gXG5cdFx0dGhpcy5jb250ZW50cyA9IGNvbnRlbnRzICBcdFx0XG5cdH1cbn1cblxuZXhwb3J0IHsgTGVjdHVyZURldGFpbEVudGl0eSB9Il19

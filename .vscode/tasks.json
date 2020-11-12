@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "watch:server",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: watch:server",
+			"detail": "export NODE_ENV=DEVELOPMENT && export TS_NODE_PROJECT=./src/server/tsconfig.json && ts-node -r tsconfig-paths/register ./scripts/watch.server.ts"
+		},
+	]
+}

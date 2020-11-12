@@ -1,0 +1,82 @@
+9d1ee56913b0d189f5ad49530e9d3c47
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var oracledb_1 = __importDefault(require("oracledb"));
+
+require("babel-polyfill");
+
+describe('Oracle db connection', function () {
+  it('connect', function (done) {
+    oracledb_1["default"].getConnection({
+      user: 'tester',
+      password: '1234',
+      connectString: '172.18.0.2:1521/xe'
+    }, /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(err, connection) {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                console.log(err); // connection.execute('select * from dual', [], (err,result)=>{
+                // 	console.log(result)
+                // 	connection.release()
+                // 	done()
+                // })	
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }());
+  });
+});
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+  reactHotLoader.register(oracledb_1, "oracledb_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3Rlc3Qvc2VydmVyL29yYWNsZS50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFVBQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLFVBQUEsQ0FBQSxDQUFBOztBQUVBLE9BQUEsQ0FBQSxnQkFBQSxDQUFBOztBQUVBLFFBQVEsQ0FBQyxzQkFBRCxFQUF5QixZQUFJO0FBRXBDLEVBQUEsRUFBRSxDQUFDLFNBQUQsRUFBWSxVQUFDLElBQUQsRUFBUTtBQUNyQixJQUFBLFVBQUEsV0FBQSxDQUFTLGFBQVQsQ0FBdUI7QUFDdEIsTUFBQSxJQUFJLEVBQUUsUUFEZ0I7QUFFdEIsTUFBQSxRQUFRLEVBQUUsTUFGWTtBQUd0QixNQUFBLGFBQWEsRUFBRTtBQUhPLEtBQXZCO0FBQUEseUVBTUcsaUJBQU8sR0FBUCxFQUFZLFVBQVo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNGLGdCQUFBLE9BQU8sQ0FBQyxHQUFSLENBQVksR0FBWixFQURFLENBRUY7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFORTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxPQU5IOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBZUEsR0FoQkMsQ0FBRjtBQWtCQSxDQXBCTyxDQUFSOzs7Ozs7Ozs7OzswQkFKQSxVIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG9yYWNsZWRiIGZyb20gJ29yYWNsZWRiJ1xuXG5pbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJ1xuXG5kZXNjcmliZSgnT3JhY2xlIGRiIGNvbm5lY3Rpb24nLCAoKT0+e1xuXHRcblx0aXQoJ2Nvbm5lY3QnLCAoZG9uZSk9Pntcblx0XHRvcmFjbGVkYi5nZXRDb25uZWN0aW9uKHtcblx0XHRcdHVzZXI6ICd0ZXN0ZXInLFxuXHRcdFx0cGFzc3dvcmQ6ICcxMjM0Jyxcblx0XHRcdGNvbm5lY3RTdHJpbmc6ICcxNzIuMTguMC4yOjE1MjEveGUnLFxuXHRcdFx0XG5cdFx0XHQvLyBjb25uZWN0aW9uU3RyaW5nOiAnamRiYzpvcmFjbGU6dGhpbjp0ZXN0ZXI6MTIzNEAvLzE3Mi4xOC4wLjI6MTUyMS94ZScsIFxuXHRcdH0sIGFzeW5jIChlcnIsIGNvbm5lY3Rpb24pPT57XG5cdFx0XHRjb25zb2xlLmxvZyhlcnIpXG5cdFx0XHQvLyBjb25uZWN0aW9uLmV4ZWN1dGUoJ3NlbGVjdCAqIGZyb20gZHVhbCcsIFtdLCAoZXJyLHJlc3VsdCk9Pntcblx0XHRcdC8vIFx0Y29uc29sZS5sb2cocmVzdWx0KVxuXHRcdFx0Ly8gXHRjb25uZWN0aW9uLnJlbGVhc2UoKVxuXHRcdFx0Ly8gXHRkb25lKClcblx0XHRcdC8vIH0pXHRcblx0XHRcdFxuXHRcdH0pXG5cdH0pXG5cbn0pIl19

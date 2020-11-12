@@ -1,0 +1,149 @@
+78b62dcfa9f0778f21fe56577bea3d9e
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __decorate = void 0 && (void 0).__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var __metadata = void 0 && (void 0).__metadata || function (k, v) {
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require("reflect-metadata");
+
+var inversify_1 = require("inversify");
+
+var Katana = /*#__PURE__*/function () {
+  function Katana(_ref) {
+    var shapness = _ref.shapness;
+
+    _classCallCheck(this, Katana);
+
+    this.shapness = shapness;
+  }
+
+  _createClass(Katana, [{
+    key: "hit",
+    value: function hit() {
+      return "cut!";
+    }
+  }, {
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return Katana;
+}();
+
+Katana = __decorate([inversify_1.injectable(), __metadata("design:paramtypes", [Object])], Katana);
+
+var Ninja = /*#__PURE__*/function () {
+  function Ninja(katana) {
+    _classCallCheck(this, Ninja);
+
+    this.katana = katana;
+  }
+
+  _createClass(Ninja, [{
+    key: "fight",
+    value: function fight() {
+      return this.katana.hit();
+    }
+  }, {
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return Ninja;
+}();
+
+Ninja = __decorate([inversify_1.injectable(), __metadata("design:paramtypes", [Katana])], Ninja);
+var container = new inversify_1.Container();
+afterEach(function () {
+  container = new inversify_1.Container();
+});
+describe('Inversify bind', function () {
+  it('bind value', function () {
+    // container.bind(Katana).toConstantValue(new Katana({ shapness: 'pupple' }))
+    container.bind(Katana).toSelf();
+    var katana = container.get(Katana);
+    expect(katana.shapness).toEqual('pupple');
+  }, 10000);
+  it('bind function which return value ', function () {//
+  });
+});
+describe('Inversify resolve', function () {
+  it('resolve root class without bind', function () {
+    container.bind(Katana).toSelf();
+    var ninja = container.resolve(Ninja);
+    expect(ninja.fight()).toEqual("cut!");
+  }, 10000);
+  it('fail to resolve sub dependencies automatically', function () {
+    //Ninja has been registered, but need to bind Katana too.
+    container.bind(Ninja).toSelf();
+
+    var tryGet = function tryGet() {
+      return container.get(Ninja);
+    };
+
+    expect(tryGet).toThrow("No matching bindings found for serviceIdentifier: Katana");
+  });
+});
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__decorate, "__decorate", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/inversify.test.ts");
+  reactHotLoader.register(__metadata, "__metadata", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/inversify.test.ts");
+  reactHotLoader.register(Katana, "Katana", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/inversify.test.ts");
+  reactHotLoader.register(Ninja, "Ninja", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/inversify.test.ts");
+  reactHotLoader.register(container, "container", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/inversify.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9pbnZlcnNpZnkudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsT0FBQSxDQUFBLGtCQUFBLENBQUE7O0FBQ0EsSUFBQSxXQUFBLEdBQUEsT0FBQSxDQUFBLFdBQUEsQ0FBQTs7QUFJQSxJQUFNLE1BQU47QUFHQyx3QkFFaUI7QUFBQSxRQURoQixRQUNnQixRQURoQixRQUNnQjs7QUFBQTs7QUFDaEIsU0FBSyxRQUFMLEdBQWdCLFFBQWhCO0FBQ0E7O0FBUEY7QUFBQTtBQUFBLDBCQVNjO0FBQ04sYUFBTyxNQUFQO0FBQ0g7QUFYTDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBOztBQUFBO0FBQUEsR0FBQTs7QUFBTSxNQUFNLEdBQUEsVUFBQSxDQUFBLENBRFgsV0FBQSxDQUFBLFVBQUEsRUFDVyxFLHlDQUFBLENBQUEsRUFBTixNQUFNLENBQU47O0FBZU4sSUFBTSxLQUFOO0FBRUksaUJBQW1CLE1BQW5CLEVBQWlDO0FBQUE7O0FBQzdCLFNBQUssTUFBTCxHQUFjLE1BQWQ7QUFDSDs7QUFKTDtBQUFBO0FBQUEsNEJBS2dCO0FBQUssYUFBTyxLQUFLLE1BQUwsQ0FBWSxHQUFaLEVBQVA7QUFBMkI7QUFMaEQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFBQTtBQUFBLEdBQUE7O0FBQU0sS0FBSyxHQUFBLFVBQUEsQ0FBQSxDQURWLFdBQUEsQ0FBQSxVQUFBLEVBQ1UsRSxpQ0FFb0IsTSxFQUZwQixDQUFBLEVBQUwsS0FBSyxDQUFMO0FBU04sSUFBSSxTQUFTLEdBQUcsSUFBSSxXQUFBLENBQUEsU0FBSixFQUFoQjtBQUVBLFNBQVMsQ0FBQyxZQUFJO0FBQ2IsRUFBQSxTQUFTLEdBQUcsSUFBSSxXQUFBLENBQUEsU0FBSixFQUFaO0FBQ0EsQ0FGUSxDQUFUO0FBSUEsUUFBUSxDQUFDLGdCQUFELEVBQW1CLFlBQUk7QUFFOUIsRUFBQSxFQUFFLENBQUMsWUFBRCxFQUFlLFlBQUk7QUFDcEI7QUFDQSxJQUFBLFNBQVMsQ0FBQyxJQUFWLENBQWUsTUFBZixFQUF1QixNQUF2QjtBQUNBLFFBQU0sTUFBTSxHQUFHLFNBQVMsQ0FBQyxHQUFWLENBQWMsTUFBZCxDQUFmO0FBQ0EsSUFBQSxNQUFNLENBQUMsTUFBTSxDQUFDLFFBQVIsQ0FBTixDQUF3QixPQUF4QixDQUFnQyxRQUFoQztBQUNBLEdBTEMsRUFLQyxLQUxELENBQUY7QUFPQSxFQUFBLEVBQUUsQ0FBQyxtQ0FBRCxFQUFzQyxZQUFJLENBQzNDO0FBQ0EsR0FGQyxDQUFGO0FBR0EsQ0FaTyxDQUFSO0FBY0EsUUFBUSxDQUFDLG1CQUFELEVBQXNCLFlBQUk7QUFFakMsRUFBQSxFQUFFLENBQUMsaUNBQUQsRUFBb0MsWUFBSTtBQUN6QyxJQUFBLFNBQVMsQ0FBQyxJQUFWLENBQWUsTUFBZixFQUF1QixNQUF2QjtBQUNBLFFBQU0sS0FBSyxHQUFHLFNBQVMsQ0FBQyxPQUFWLENBQWtCLEtBQWxCLENBQWQ7QUFDQSxJQUFBLE1BQU0sQ0FBQyxLQUFLLENBQUMsS0FBTixFQUFELENBQU4sQ0FBc0IsT0FBdEIsQ0FBOEIsTUFBOUI7QUFDQSxHQUpDLEVBSUMsS0FKRCxDQUFGO0FBTUEsRUFBQSxFQUFFLENBQUMsZ0RBQUQsRUFBbUQsWUFBSTtBQUN4RDtBQUNBLElBQUEsU0FBUyxDQUFDLElBQVYsQ0FBZSxLQUFmLEVBQXNCLE1BQXRCOztBQUNBLFFBQU0sTUFBTSxHQUFHLFNBQVQsTUFBUztBQUFBLGFBQUksU0FBUyxDQUFDLEdBQVYsQ0FBYyxLQUFkLENBQUo7QUFBQSxLQUFmOztBQUNBLElBQUEsTUFBTSxDQUFDLE1BQUQsQ0FBTixDQUFlLE9BQWYsQ0FBdUIsMERBQXZCO0FBQ0EsR0FMQyxDQUFGO0FBTUEsQ0FkTyxDQUFSOzs7Ozs7Ozs7Ozs7MEJBNUNNLE07MEJBZUEsSzswQkFTRixTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdyZWZsZWN0LW1ldGFkYXRhJ1xuaW1wb3J0IHsgaW5qZWN0YWJsZSwgQ29udGFpbmVyIH0gZnJvbSAnaW52ZXJzaWZ5J1xuXG5cbkBpbmplY3RhYmxlKClcbmNsYXNzIEthdGFuYSB7XG5cdHNoYXBuZXNzPzpzdHJpbmdcblxuXHRjb25zdHJ1Y3Rvcih7XG5cdFx0c2hhcG5lc3Ncblx0fTpQYXJ0aWFsPEthdGFuYT4pe1xuXHRcdHRoaXMuc2hhcG5lc3MgPSBzaGFwbmVzc1xuXHR9XG5cbiAgICBwdWJsaWMgaGl0KCkge1xuICAgICAgICByZXR1cm4gXCJjdXQhXCI7XG4gICAgfVxufVxuXG5AaW5qZWN0YWJsZSgpXG5jbGFzcyBOaW5qYSBpbXBsZW1lbnRzIE5pbmphIHtcbiAgICBwdWJsaWMga2F0YW5hOiBLYXRhbmE7XG4gICAgcHVibGljIGNvbnN0cnVjdG9yKGthdGFuYTogS2F0YW5hKSB7XG4gICAgICAgIHRoaXMua2F0YW5hID0ga2F0YW5hO1xuICAgIH1cbiAgICBwdWJsaWMgZmlnaHQoKSB7IHJldHVybiB0aGlzLmthdGFuYS5oaXQoKTsgfVxufVxuXG5cbmxldCBjb250YWluZXIgPSBuZXcgQ29udGFpbmVyKCk7XG5cbmFmdGVyRWFjaCgoKT0+e1xuXHRjb250YWluZXIgPSBuZXcgQ29udGFpbmVyKClcdFxufSlcblxuZGVzY3JpYmUoJ0ludmVyc2lmeSBiaW5kJywgKCk9PntcblxuXHRpdCgnYmluZCB2YWx1ZScsICgpPT57XG5cdFx0Ly8gY29udGFpbmVyLmJpbmQoS2F0YW5hKS50b0NvbnN0YW50VmFsdWUobmV3IEthdGFuYSh7IHNoYXBuZXNzOiAncHVwcGxlJyB9KSlcblx0XHRjb250YWluZXIuYmluZChLYXRhbmEpLnRvU2VsZigpXG5cdFx0Y29uc3Qga2F0YW5hID0gY29udGFpbmVyLmdldChLYXRhbmEpO1xuXHRcdGV4cGVjdChrYXRhbmEuc2hhcG5lc3MpLnRvRXF1YWwoJ3B1cHBsZScpO1xuXHR9LCAxMDAwMClcblxuXHRpdCgnYmluZCBmdW5jdGlvbiB3aGljaCByZXR1cm4gdmFsdWUgJywgKCk9Pntcblx0XHQvL1xuXHR9KVxufSlcblxuZGVzY3JpYmUoJ0ludmVyc2lmeSByZXNvbHZlJywgKCk9PntcblxuXHRpdCgncmVzb2x2ZSByb290IGNsYXNzIHdpdGhvdXQgYmluZCcsICgpPT57XG5cdFx0Y29udGFpbmVyLmJpbmQoS2F0YW5hKS50b1NlbGYoKTtcblx0XHRjb25zdCBuaW5qYSA9IGNvbnRhaW5lci5yZXNvbHZlKE5pbmphKTtcblx0XHRleHBlY3QobmluamEuZmlnaHQoKSkudG9FcXVhbChcImN1dCFcIik7XG5cdH0sIDEwMDAwKVxuXG5cdGl0KCdmYWlsIHRvIHJlc29sdmUgc3ViIGRlcGVuZGVuY2llcyBhdXRvbWF0aWNhbGx5JywgKCk9Pntcblx0XHQvL05pbmphIGhhcyBiZWVuIHJlZ2lzdGVyZWQsIGJ1dCBuZWVkIHRvIGJpbmQgS2F0YW5hIHRvby5cblx0XHRjb250YWluZXIuYmluZChOaW5qYSkudG9TZWxmKClcblx0XHRjb25zdCB0cnlHZXQgPSAoKT0+Y29udGFpbmVyLmdldChOaW5qYSk7XG5cdFx0ZXhwZWN0KHRyeUdldCkudG9UaHJvdyhcIk5vIG1hdGNoaW5nIGJpbmRpbmdzIGZvdW5kIGZvciBzZXJ2aWNlSWRlbnRpZmllcjogS2F0YW5hXCIpO1xuXHR9KVxufSlcblxuIl19

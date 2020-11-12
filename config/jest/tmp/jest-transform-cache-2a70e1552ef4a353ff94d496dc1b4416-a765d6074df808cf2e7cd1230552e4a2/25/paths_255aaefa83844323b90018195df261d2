@@ -1,0 +1,91 @@
+f4fca180eacf92640b0ae3cc8afcf2c0
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Path = void 0;
+
+var path_1 = __importDefault(require("path"));
+/* Environment */
+
+
+var root = path_1["default"].join(__dirname, '..');
+var src = path_1["default"].join(root, 'src');
+var dist = path_1["default"].join(root, 'dist');
+var config = path_1["default"].join(root, 'config');
+var config_jest = path_1["default"].join(config, 'jest');
+/* Source */
+
+var client = path_1["default"].join(src, 'client');
+var component = path_1["default"].join(client, 'component');
+var index_html = path_1["default"].join(client, 'index.html');
+var server = path_1["default"].join(src, 'server');
+var inter_face = path_1["default"].join(src, 'interface');
+var domain = path_1["default"].join(src, 'interface', 'domain');
+/* Distribution */
+
+var content_base = path_1["default"].join(dist, 'client');
+var Path = {
+  root: root,
+  src: src,
+  dist: dist,
+  config: config,
+  config_jest: config_jest,
+  client: client,
+  component: component,
+  index_html: index_html,
+  "interface": inter_face,
+  domain: domain,
+  server: server,
+  content_base: content_base
+};
+exports.Path = Path;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(path_1, "path_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(root, "root", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(src, "src", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(dist, "dist", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(config, "config", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(config_jest, "config_jest", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(client, "client", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(component, "component", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(index_html, "index_html", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(server, "server", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(inter_face, "inter_face", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(domain, "domain", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(content_base, "content_base", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+  reactHotLoader.register(Path, "Path", "/home/broth59/Desktop/Projects/React/JS-project-environment/config/paths.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L2NvbmZpZy9wYXRocy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsSUFBQSxNQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxNQUFBLENBQUEsQ0FBQTtBQUVBOzs7QUFDQSxJQUFNLElBQUksR0FBSyxNQUFBLFdBQUEsQ0FBSyxJQUFMLENBQVUsU0FBVixFQUFxQixJQUFyQixDQUFmO0FBQ0EsSUFBTSxHQUFHLEdBQU0sTUFBQSxXQUFBLENBQUssSUFBTCxDQUFVLElBQVYsRUFBZ0IsS0FBaEIsQ0FBZjtBQUNBLElBQU0sSUFBSSxHQUFLLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxJQUFWLEVBQWdCLE1BQWhCLENBQWY7QUFDQSxJQUFNLE1BQU0sR0FBTSxNQUFBLFdBQUEsQ0FBSyxJQUFMLENBQVUsSUFBVixFQUFrQixRQUFsQixDQUFsQjtBQUNBLElBQU0sV0FBVyxHQUFHLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxNQUFWLEVBQWtCLE1BQWxCLENBQXBCO0FBR0E7O0FBQ0EsSUFBTSxNQUFNLEdBQU8sTUFBQSxXQUFBLENBQUssSUFBTCxDQUFVLEdBQVYsRUFBZSxRQUFmLENBQW5CO0FBQ0EsSUFBTSxTQUFTLEdBQUksTUFBQSxXQUFBLENBQUssSUFBTCxDQUFVLE1BQVYsRUFBa0IsV0FBbEIsQ0FBbkI7QUFDQSxJQUFNLFVBQVUsR0FBRyxNQUFBLFdBQUEsQ0FBSyxJQUFMLENBQVUsTUFBVixFQUFrQixZQUFsQixDQUFuQjtBQUVBLElBQU0sTUFBTSxHQUFPLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxHQUFWLEVBQWUsUUFBZixDQUFuQjtBQUVBLElBQU0sVUFBVSxHQUFHLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxHQUFWLEVBQWUsV0FBZixDQUFuQjtBQUNBLElBQU0sTUFBTSxHQUFPLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxHQUFWLEVBQWUsV0FBZixFQUE0QixRQUE1QixDQUFuQjtBQUdBOztBQUNBLElBQU0sWUFBWSxHQUFHLE1BQUEsV0FBQSxDQUFLLElBQUwsQ0FBVSxJQUFWLEVBQWdCLFFBQWhCLENBQXJCO0FBR0EsSUFBTSxJQUFJLEdBQUc7QUFDWixFQUFBLElBQUksRUFBSixJQURZO0FBQ04sRUFBQSxHQUFHLEVBQUgsR0FETTtBQUNELEVBQUEsSUFBSSxFQUFKLElBREM7QUFFWixFQUFBLE1BQU0sRUFBTixNQUZZO0FBRUosRUFBQSxXQUFXLEVBQVgsV0FGSTtBQUlULEVBQUEsTUFBTSxFQUFOLE1BSlM7QUFJRCxFQUFBLFNBQVMsRUFBVCxTQUpDO0FBS1QsRUFBQSxVQUFVLEVBQVYsVUFMUztBQU1ULGVBQVcsVUFORjtBQU1jLEVBQUEsTUFBTSxFQUFOLE1BTmQ7QUFPWixFQUFBLE1BQU0sRUFBTixNQVBZO0FBU1osRUFBQSxZQUFZLEVBQVo7QUFUWSxDQUFiO0FBZUksT0FBQSxDQUFBLElBQUEsR0FBQSxJQUFBOzs7Ozs7Ozs7OzswQkF4Q0osTTswQkFHTSxJOzBCQUNBLEc7MEJBQ0EsSTswQkFDQSxNOzBCQUNBLFc7MEJBSUEsTTswQkFDQSxTOzBCQUNBLFU7MEJBRUEsTTswQkFFQSxVOzBCQUNBLE07MEJBSUEsWTswQkFHQSxJIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHBhdGggZnJvbSAncGF0aCdcblxuLyogRW52aXJvbm1lbnQgKi8gXG5jb25zdCByb290ICAgPSBwYXRoLmpvaW4oX19kaXJuYW1lLCAnLi4nKVxuY29uc3Qgc3JjICAgID0gcGF0aC5qb2luKHJvb3QsICdzcmMnKVxuY29uc3QgZGlzdCAgID0gcGF0aC5qb2luKHJvb3QsICdkaXN0JylcbmNvbnN0IGNvbmZpZyBcdCAgPSBwYXRoLmpvaW4ocm9vdCwgICAnY29uZmlnJylcbmNvbnN0IGNvbmZpZ19qZXN0ID0gcGF0aC5qb2luKGNvbmZpZywgJ2plc3QnKVxuXG5cbi8qIFNvdXJjZSAqL1xuY29uc3QgY2xpZW50ICAgICA9IHBhdGguam9pbihzcmMsICdjbGllbnQnKVxuY29uc3QgY29tcG9uZW50ICA9IHBhdGguam9pbihjbGllbnQsICdjb21wb25lbnQnKVxuY29uc3QgaW5kZXhfaHRtbCA9IHBhdGguam9pbihjbGllbnQsICdpbmRleC5odG1sJylcblxuY29uc3Qgc2VydmVyICAgICA9IHBhdGguam9pbihzcmMsICdzZXJ2ZXInKVxuXG5jb25zdCBpbnRlcl9mYWNlID0gcGF0aC5qb2luKHNyYywgJ2ludGVyZmFjZScpXG5jb25zdCBkb21haW4gICAgID0gcGF0aC5qb2luKHNyYywgJ2ludGVyZmFjZScsICdkb21haW4nKVxuXG5cbi8qIERpc3RyaWJ1dGlvbiAqL1xuY29uc3QgY29udGVudF9iYXNlID0gcGF0aC5qb2luKGRpc3QsICdjbGllbnQnKVxuXG5cbmNvbnN0IFBhdGggPSB7XG5cdHJvb3QsIHNyYywgZGlzdCwgXG5cdGNvbmZpZywgY29uZmlnX2plc3QsXG4gICAgXG4gICAgY2xpZW50LCBjb21wb25lbnQsXG4gICAgaW5kZXhfaHRtbCxcbiAgICBpbnRlcmZhY2U6IGludGVyX2ZhY2UsIGRvbWFpbixcblx0c2VydmVyLFxuXHRcblx0Y29udGVudF9iYXNlLFxufSBcblxuXG5cbmV4cG9ydCB7IFxuICAgIFBhdGhcbn0gXG5cbiJdfQ==

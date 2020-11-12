@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserPage/>  1`] = `
+<div>
+  <h1>
+    TTT
+  </h1>
+</div>
+`;
+
+exports[`<UserPage/> render perpectly 1`] = `
+<div>
+  <h1>
+    TT
+  </h1>
+</div>
+`;

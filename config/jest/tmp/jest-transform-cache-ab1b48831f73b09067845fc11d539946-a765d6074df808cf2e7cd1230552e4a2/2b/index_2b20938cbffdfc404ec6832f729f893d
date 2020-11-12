@@ -1,0 +1,130 @@
+0cf6f1438fc9da66331d7fe2c14215f5
+"use strict";
+
+var _core = require("@emotion/core");
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __decorate = void 0 && (void 0).__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importDefault(require("react"));
+
+var mobx_react_1 = require("mobx-react");
+
+var classnames_1 = __importDefault(require("classnames"));
+
+var css_1 = __importDefault(require("./css"));
+
+var StoreContext_1 = require("@client/context/StoreContext");
+
+var cx = classnames_1["default"].bind(css_1["default"]);
+
+var UserPage = /*#__PURE__*/function (_react_1$default$Comp) {
+  _inherits(UserPage, _react_1$default$Comp);
+
+  var _super = _createSuper(UserPage);
+
+  function UserPage() {
+    _classCallCheck(this, UserPage);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(UserPage, [{
+    key: "render",
+    value: function render() {
+      var _StoreContext_1$useSt = StoreContext_1.useStore(),
+          note_store = _StoreContext_1$useSt.note_store;
+
+      return note_store.note_list.map(function (x) {
+        return (0, _core.jsx)("div", {
+          key: x.id
+        }, x.content, " / ", x.comment);
+      });
+    }
+  }, {
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return UserPage;
+}(react_1["default"].Component);
+
+UserPage = __decorate([mobx_react_1.inject('notestore')], UserPage);
+exports["default"] = UserPage;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__decorate, "__decorate", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(react_1, "react_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(classnames_1, "classnames_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(css_1, "css_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(cx, "cx", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+  reactHotLoader.register(UserPage, "UserPage", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/component/page/UserPage/index.tsx");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9jbGllbnQvY29tcG9uZW50L3BhZ2UvVXNlclBhZ2UvaW5kZXgudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUNBLElBQUEsWUFBQSxHQUFBLE9BQUEsQ0FBQSxZQUFBLENBQUE7O0FBRUEsSUFBQSxZQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxZQUFBLENBQUEsQ0FBQTs7QUFDQSxJQUFBLEtBQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUNBLElBQUEsY0FBQSxHQUFBLE9BQUEsQ0FBQSw4QkFBQSxDQUFBOztBQUVBLElBQU0sRUFBRSxHQUFHLFlBQUEsV0FBQSxDQUFXLElBQVgsQ0FBZ0IsS0FBQSxXQUFoQixDQUFYOztBQUdBLElBQU0sUUFBTjtBQUFBOztBQUFBOztBQUFBO0FBQUE7O0FBQUE7QUFBQTs7QUFBQTtBQUFBO0FBQUEsNkJBRU87QUFBQSxrQ0FDa0IsY0FBQSxDQUFBLFFBQUEsRUFEbEI7QUFBQSxVQUNHLFVBREgseUJBQ0csVUFESDs7QUFHQyxhQUNDLFVBQVcsQ0FBQyxTQUFaLENBQXNCLEdBQXRCLENBQTBCLFVBQUMsQ0FBRDtBQUFBLGVBQzVCO0FBQUssVUFBQSxHQUFHLEVBQUUsQ0FBQyxDQUFDO0FBQVosV0FBaUIsQ0FBQyxDQUFDLE9BQW5CLFNBQStCLENBQUMsQ0FBQyxPQUFqQyxDQUQ0QjtBQUFBLE9BQTFCLENBREQ7QUFJSDtBQVRMO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7O0FBQUE7QUFBQSxFQUF1QixPQUFBLFdBQUEsQ0FBTSxTQUE3QixDQUFBOztBQUFNLFFBQVEsR0FBQSxVQUFBLENBQUEsQ0FEYixZQUFBLENBQUEsTUFBQSxDQUFPLFdBQVAsQ0FDYSxDQUFBLEVBQVIsUUFBUSxDQUFSO0FBWU4sT0FBQSxXQUFBLEdBQWUsUUFBZjs7Ozs7Ozs7Ozs7OzBCQXRCQSxPOzBCQUdBLFk7MEJBQ0EsSzswQkFHTSxFOzBCQUdBLFEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgeyBpbmplY3QgfSBmcm9tICdtb2J4LXJlYWN0J1xuaW1wb3J0IHsganN4IH0gZnJvbSAnQGVtb3Rpb24vY29yZSdcbmltcG9ydCBjbGFzc05hbWVzIGZyb20gJ2NsYXNzbmFtZXMnXG5pbXBvcnQgU3R5bGUgZnJvbSAnLi9jc3MnXG5pbXBvcnQgeyB1c2VTdG9yZSB9IGZyb20gJ0BjbGllbnQvY29udGV4dC9TdG9yZUNvbnRleHQnXG5cbmNvbnN0IGN4ID0gY2xhc3NOYW1lcy5iaW5kKFN0eWxlKVxuXG5AaW5qZWN0KCdub3Rlc3RvcmUnKVxuY2xhc3MgVXNlclBhZ2UgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnR7XG5cblx0cmVuZGVyKCl7XG5cdFx0Y29uc3QgeyBub3RlX3N0b3JlIH0gPSB1c2VTdG9yZSgpXG5cbiAgICAgICBcdHJldHVybiAoXG4gICAgICAgIFx0bm90ZV9zdG9yZSEubm90ZV9saXN0Lm1hcCgoeDphbnkpPT5cblx0XHRcdFx0ICAgPGRpdiBrZXk9e3guaWR9Pnt4LmNvbnRlbnR9IC8ge3guY29tbWVudH08L2Rpdj4pXG5cdCAgIFx0KVxuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVXNlclBhZ2UiXX0=

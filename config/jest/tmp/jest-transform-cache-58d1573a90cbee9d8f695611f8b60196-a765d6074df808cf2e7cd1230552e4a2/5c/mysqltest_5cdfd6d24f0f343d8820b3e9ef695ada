@@ -1,0 +1,74 @@
+63d3f6dcdca98aa9d29cbfbe7a8a8e10
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var mysql_1 = __importDefault(require("mysql"));
+
+describe('create connection', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+  var connection, db;
+  return regeneratorRuntime.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          connection = mysql_1["default"].createConnection({
+            host: 'localhost',
+            user: 'mysql_user',
+            password: 'mysql_password',
+            database: 'test',
+            port: 3306
+          });
+          _context.next = 3;
+          return connection.connect();
+
+        case 3:
+          db = _context.sent;
+
+        case 4:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, _callee);
+})));
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/mysql.test.ts");
+  reactHotLoader.register(mysql_1, "mysql_1", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/mysql.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9teXNxbC50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUVBLFFBQVEsQ0FBQyxtQkFBRCx1RUFBc0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3BCLFVBQUEsVUFEb0IsR0FDUCxPQUFBLFdBQUEsQ0FBTSxnQkFBTixDQUF1QjtBQUN0QyxZQUFBLElBQUksRUFBRSxXQURnQztBQUV0QyxZQUFBLElBQUksRUFBRSxZQUZnQztBQUd0QyxZQUFBLFFBQVEsRUFBRSxnQkFINEI7QUFJdEMsWUFBQSxRQUFRLEVBQUUsTUFKNEI7QUFLdEMsWUFBQSxJQUFJLEVBQUU7QUFMZ0MsV0FBdkIsQ0FETztBQUFBO0FBQUEsaUJBU1QsVUFBVSxDQUFDLE9BQVgsRUFUUzs7QUFBQTtBQVNwQixVQUFBLEVBVG9COztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLENBQXRCLEdBQVI7Ozs7Ozs7Ozs7OzBCQUZBLE8iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbXlzcWwgZnJvbSAnbXlzcWwnO1xuXG5kZXNjcmliZSgnY3JlYXRlIGNvbm5lY3Rpb24nLCBhc3luYyAoKSA9PiB7XG4gICAgY29uc3QgY29ubmVjdGlvbiA9IG15c3FsLmNyZWF0ZUNvbm5lY3Rpb24oe1xuICAgICAgICBob3N0OiAnbG9jYWxob3N0JyxcbiAgICAgICAgdXNlcjogJ215c3FsX3VzZXInLFxuICAgICAgICBwYXNzd29yZDogJ215c3FsX3Bhc3N3b3JkJyxcbiAgICAgICAgZGF0YWJhc2U6ICd0ZXN0JyxcbiAgICAgICAgcG9ydDogMzMwNixcbiAgICB9KTtcblxuICAgIGNvbnN0IGRiID0gYXdhaXQgY29ubmVjdGlvbi5jb25uZWN0KCk7XG59KTtcbiJdfQ==

@@ -1,0 +1,76 @@
+09f164fc81fb89edf3bccea907b78876
+"use strict";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n\t\t\t\tquery lecture {\n\t\t\t\t\tcotent_no\n\t\t\t\t}\n\t\t\t"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var client_1 = require("@apollo/client");
+
+var apollo_link_error_1 = require("apollo-link-error");
+
+require("cross-fetch/polyfill");
+
+require("babel-polyfill"); // beforeAll(async ()=>{
+// })
+
+
+describe('Oracle db connection', function () {
+  it('connect', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var errorLink, client;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            errorLink = apollo_link_error_1.onError(function (_ref2) {
+              var graphQLErrors = _ref2.graphQLErrors;
+              if (graphQLErrors) graphQLErrors.map(function (_ref3) {
+                var message = _ref3.message;
+                return console.log(message);
+              });
+            });
+            client = new client_1.ApolloClient({
+              uri: 'http://localhost:3020/graphql',
+              cache: new client_1.InMemoryCache(),
+              link: client_1.ApolloLink.from([errorLink])
+            });
+            _context.next = 4;
+            return client.query({
+              query: client_1.gql(_templateObject()),
+              variables: {}
+            }).then(function (result) {
+              return console.log(result);
+            })["catch"](function (_ref4) {
+              var message = _ref4.message;
+              return console.log(message);
+            });
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  })), 20000);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L2NsaWVudC9vcmFjbGUudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUdBLElBQUEsUUFBQSxHQUFBLE9BQUEsQ0FBQSxnQkFBQSxDQUFBOztBQUNBLElBQUEsbUJBQUEsR0FBQSxPQUFBLENBQUEsbUJBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsc0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQSxDLENBR0E7QUFFQTs7O0FBR0EsUUFBUSxDQUFDLHNCQUFELEVBQXlCLFlBQUk7QUFFcEMsRUFBQSxFQUFFLENBQUMsU0FBRCx1RUFBWTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDUCxZQUFBLFNBRE8sR0FDSyxtQkFBQSxDQUFBLE9BQUEsQ0FBUSxpQkFBc0I7QUFBQSxrQkFBbkIsYUFBbUIsU0FBbkIsYUFBbUI7QUFDL0Msa0JBQUksYUFBSixFQUFtQixhQUFhLENBQUMsR0FBZCxDQUFrQjtBQUFBLG9CQUFHLE9BQUgsU0FBRyxPQUFIO0FBQUEsdUJBQWlCLE9BQU8sQ0FBQyxHQUFSLENBQVksT0FBWixDQUFqQjtBQUFBLGVBQWxCO0FBQ2pCLGFBRmUsQ0FETDtBQUtQLFlBQUEsTUFMTyxHQUtFLElBQUksUUFBQSxDQUFBLFlBQUosQ0FBaUI7QUFDL0IsY0FBQSxHQUFHLEVBQUUsK0JBRDBCO0FBRS9CLGNBQUEsS0FBSyxFQUFFLElBQUksUUFBQSxDQUFBLGFBQUosRUFGd0I7QUFHL0IsY0FBQSxJQUFJLEVBQUUsUUFBQSxDQUFBLFVBQUEsQ0FBVyxJQUFYLENBQWdCLENBQUUsU0FBRixDQUFoQjtBQUh5QixhQUFqQixDQUxGO0FBQUE7QUFBQSxtQkFVUCxNQUFNLENBQ1gsS0FESyxDQUNDO0FBQ04sY0FBQSxLQUFLLEVBQUUsUUFBQSxDQUFBLEdBQUYsbUJBREM7QUFPTixjQUFBLFNBQVMsRUFBRTtBQVBMLGFBREQsRUFZTCxJQVpLLENBWUEsVUFBQSxNQUFNO0FBQUEscUJBQUksT0FBTyxDQUFDLEdBQVIsQ0FBWSxNQUFaLENBQUo7QUFBQSxhQVpOLFdBYUM7QUFBQSxrQkFBRyxPQUFILFNBQUcsT0FBSDtBQUFBLHFCQUFlLE9BQU8sQ0FBQyxHQUFSLENBQVksT0FBWixDQUFmO0FBQUEsYUFiRCxDQVZPOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEdBQVosSUF5QkMsS0F6QkQsQ0FBRjtBQTJCQSxDQTdCTyxDQUFSIiwic291cmNlc0NvbnRlbnQiOlsiLy9ib290c3RyYXBcbi8vbW9kdWxlXG5pbXBvcnQgeyBBcG9sbG9TZXJ2ZXIgfSBmcm9tICdAYXBvbGxvL3NlcnZlcidcbmltcG9ydCB7IEFwb2xsb0NsaWVudCwgSW5NZW1vcnlDYWNoZSwgZ3FsLCBBcG9sbG9MaW5rIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnXG5pbXBvcnQgeyBvbkVycm9yIH0gZnJvbSAnYXBvbGxvLWxpbmstZXJyb3InXG5pbXBvcnQgJ2Nyb3NzLWZldGNoL3BvbHlmaWxsJ1xuaW1wb3J0ICdiYWJlbC1wb2x5ZmlsbCdcbmltcG9ydCBvcmFjbGVkYiBmcm9tICdvcmFjbGVkYidcblxuLy8gYmVmb3JlQWxsKGFzeW5jICgpPT57XG5cdFxuLy8gfSlcblxuXG5kZXNjcmliZSgnT3JhY2xlIGRiIGNvbm5lY3Rpb24nLCAoKT0+e1xuXHRcblx0aXQoJ2Nvbm5lY3QnLCBhc3luYyAoKT0+e1xuXHRcdGNvbnN0IGVycm9yTGluayA9IG9uRXJyb3IoKHsgZ3JhcGhRTEVycm9ycyB9KSA9PiB7XG5cdFx0XHRpZiAoZ3JhcGhRTEVycm9ycykgZ3JhcGhRTEVycm9ycy5tYXAoKHsgbWVzc2FnZSB9KSA9PiBjb25zb2xlLmxvZyhtZXNzYWdlKSlcblx0XHQgIH0pIGFzIGFueVxuXG5cdFx0Y29uc3QgY2xpZW50ID0gbmV3IEFwb2xsb0NsaWVudCh7XG5cdFx0XHR1cmk6ICdodHRwOi8vbG9jYWxob3N0OjMwMjAvZ3JhcGhxbCcsXG5cdFx0XHRjYWNoZTogbmV3IEluTWVtb3J5Q2FjaGUoKSxcdFxuXHRcdFx0bGluazogQXBvbGxvTGluay5mcm9tKFsgZXJyb3JMaW5rIF0pXG5cdFx0fSk7XHRcdFxuXHRcdGF3YWl0IGNsaWVudFxuXHRcdC5xdWVyeSh7XG5cdFx0XHRxdWVyeTogZ3FsYFxuXHRcdFx0XHRxdWVyeSBsZWN0dXJlIHtcblx0XHRcdFx0XHRjb3RlbnRfbm9cblx0XHRcdFx0fVxuXHRcdFx0YFxuXHRcdFx0LFxuXHRcdFx0dmFyaWFibGVzOiB7XG5cdFx0XHRcdFxuXHRcdFx0fVxuXHRcdH0pXG5cdFx0LnRoZW4ocmVzdWx0ID0+IGNvbnNvbGUubG9nKHJlc3VsdCkpXG5cdFx0LmNhdGNoKCh7IG1lc3NhZ2UgfSk9PmNvbnNvbGUubG9nKG1lc3NhZ2UpKTtcblx0XHRcdFxuXHR9LCAyMDAwMClcblxufSkiXX0=

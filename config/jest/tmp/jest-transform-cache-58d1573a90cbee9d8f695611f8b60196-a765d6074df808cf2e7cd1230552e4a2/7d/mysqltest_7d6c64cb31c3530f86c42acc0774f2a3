@@ -1,0 +1,54 @@
+decad1e61d3967a553e6fb17ae2e49ce
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var mysql_1 = __importDefault(require("mysql"));
+
+describe('create connection', function () {
+  var connection = mysql_1["default"].createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'database',
+    port: 3307
+  });
+  console.log(connection.connect());
+});
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/mysql.test.ts");
+  reactHotLoader.register(mysql_1, "mysql_1", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/mysql.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9teXNxbC50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLElBQUEsT0FBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsT0FBQSxDQUFBLENBQUE7O0FBRUEsUUFBUSxDQUFDLG1CQUFELEVBQXNCLFlBQUs7QUFDL0IsTUFBTSxVQUFVLEdBQUcsT0FBQSxXQUFBLENBQU0sZ0JBQU4sQ0FBdUI7QUFDdEMsSUFBQSxJQUFJLEVBQUUsV0FEZ0M7QUFFdEMsSUFBQSxJQUFJLEVBQUUsTUFGZ0M7QUFHdEMsSUFBQSxRQUFRLEVBQUUsVUFINEI7QUFJdEMsSUFBQSxRQUFRLEVBQUUsVUFKNEI7QUFLdEMsSUFBQSxJQUFJLEVBQUU7QUFMZ0MsR0FBdkIsQ0FBbkI7QUFRQSxFQUFBLE9BQU8sQ0FBQyxHQUFSLENBQVksVUFBVSxDQUFDLE9BQVgsRUFBWjtBQUNILENBVk8sQ0FBUjs7Ozs7Ozs7Ozs7MEJBRkEsTyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBteXNxbCBmcm9tICdteXNxbCc7XG5cbmRlc2NyaWJlKCdjcmVhdGUgY29ubmVjdGlvbicsICgpID0+IHtcbiAgICBjb25zdCBjb25uZWN0aW9uID0gbXlzcWwuY3JlYXRlQ29ubmVjdGlvbih7XG4gICAgICAgIGhvc3Q6ICdsb2NhbGhvc3QnLFxuICAgICAgICB1c2VyOiAncm9vdCcsXG4gICAgICAgIHBhc3N3b3JkOiAncGFzc3dvcmQnLFxuICAgICAgICBkYXRhYmFzZTogJ2RhdGFiYXNlJyxcbiAgICAgICAgcG9ydDogMzMwNyxcbiAgICB9KTtcblxuICAgIGNvbnNvbGUubG9nKGNvbm5lY3Rpb24uY29ubmVjdCgpKTtcbn0pO1xuIl19

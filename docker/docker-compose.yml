@@ -1,0 +1,7 @@
+version: '3'
+services:
+  database:
+    build: ./database
+    ports:
+      - "3306:3306"
+    network_mode: host

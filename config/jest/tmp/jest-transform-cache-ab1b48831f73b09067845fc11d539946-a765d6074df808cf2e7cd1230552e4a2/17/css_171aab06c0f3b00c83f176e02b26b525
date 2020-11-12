@@ -1,0 +1,29 @@
+88dee3188424be661e2de59c21c6fed2
+"use strict";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n\t\tcolor: red \n\t"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var core_1 = require("@emotion/core");
+
+exports["default"] = {
+  red: core_1.css(_templateObject())
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9jbGllbnQvY29tcG9uZW50L3BhZ2UvVXNlclBhZ2UvY3NzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE1BQUEsR0FBQSxPQUFBLENBQUEsZUFBQSxDQUFBOztBQUVBLE9BQUEsV0FBQSxHQUFlO0FBQ2QsRUFBQSxHQUFHLEVBQUcsTUFBQSxDQUFBLEdBQUg7QUFEVyxDQUFmIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3NzIH0gZnJvbSAnQGVtb3Rpb24vY29yZSdcblxuZXhwb3J0IGRlZmF1bHQge1xuXHRyZWQgOiBjc3NgXG5cdFx0Y29sb3I6IHJlZCBcblx0YFxufSJdfQ==

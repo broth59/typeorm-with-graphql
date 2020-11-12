@@ -1,0 +1,72 @@
+5d478763d0cf206268eaeeefb4d5d8b6
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var NoteStore_1 = __importDefault(require("./NoteStore"));
+
+var RootStore = /*#__PURE__*/function () {
+  function RootStore(note_store) {
+    _classCallCheck(this, RootStore);
+
+    this.note_store = note_store;
+    this.note_store = note_store || new NoteStore_1["default"](this);
+  }
+
+  _createClass(RootStore, [{
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return RootStore;
+}();
+
+exports["default"] = RootStore;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/store/RootStore.ts");
+  reactHotLoader.register(NoteStore_1, "NoteStore_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/store/RootStore.ts");
+  reactHotLoader.register(RootStore, "RootStore", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/store/RootStore.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9jbGllbnQvc3RvcmUvUm9vdFN0b3JlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUNBLElBQUEsV0FBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsYUFBQSxDQUFBLENBQUE7O0lBRXFCLFM7QUFFcEIscUJBQ1EsVUFEUixFQUM4QjtBQUFBOztBQUF0QixTQUFBLFVBQUEsR0FBQSxVQUFBO0FBRVAsU0FBSyxVQUFMLEdBQWtCLFVBQVUsSUFBSSxJQUFJLFdBQUEsV0FBSixDQUFjLElBQWQsQ0FBaEM7QUFDQTs7Ozs7Ozs7Ozs7Ozs7QUFORixPQUFBLFdBQUEsR0FBQSxTQUFBOzs7Ozs7Ozs7OzswQkFGQSxXOzBCQUVxQixTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IE5vdGVTdG9yZSBmcm9tICcuL05vdGVTdG9yZSdcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUm9vdFN0b3JlIHtcblx0XG5cdGNvbnN0cnVjdG9yKFxuXHRcdHB1YmxpYyBub3RlX3N0b3JlPzogTm90ZVN0b3JlLFxuXHQpe1xuXHRcdHRoaXMubm90ZV9zdG9yZSA9IG5vdGVfc3RvcmUgfHwgbmV3IE5vdGVTdG9yZSh0aGlzKVxuXHR9XG59Il19

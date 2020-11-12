@@ -1,0 +1,82 @@
+67a5d74186465b07b8ce6c1fce031ab6
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var oracledb_1 = __importDefault(require("oracledb"));
+
+require("babel-polyfill");
+
+describe('Oracle db connection', function () {
+  it('connect', function (done) {
+    oracledb_1["default"].getConnection({
+      user: 'tester',
+      password: '1234',
+      connectString: '172.18.0.2:1521/xe'
+    }, /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(err, connection) {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                connection.execute('select * from dual', [], function (err, result) {
+                  console.log(err, result);
+                  connection.release();
+                  done();
+                });
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }());
+  });
+});
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+  reactHotLoader.register(oracledb_1, "oracledb_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3Rlc3Qvc2VydmVyL29yYWNsZS50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFVBQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLFVBQUEsQ0FBQSxDQUFBOztBQUVBLE9BQUEsQ0FBQSxnQkFBQSxDQUFBOztBQUVBLFFBQVEsQ0FBQyxzQkFBRCxFQUF5QixZQUFJO0FBRXBDLEVBQUEsRUFBRSxDQUFDLFNBQUQsRUFBWSxVQUFDLElBQUQsRUFBUTtBQUNyQixJQUFBLFVBQUEsV0FBQSxDQUFTLGFBQVQsQ0FBdUI7QUFDdEIsTUFBQSxJQUFJLEVBQUUsUUFEZ0I7QUFFdEIsTUFBQSxRQUFRLEVBQUUsTUFGWTtBQUd0QixNQUFBLGFBQWEsRUFBRTtBQUhPLEtBQXZCO0FBQUEseUVBSUcsaUJBQU8sR0FBUCxFQUFZLFVBQVo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNGLGdCQUFBLFVBQVUsQ0FBQyxPQUFYLENBQW1CLG9CQUFuQixFQUF5QyxFQUF6QyxFQUE2QyxVQUFDLEdBQUQsRUFBSyxNQUFMLEVBQWM7QUFDMUQsa0JBQUEsT0FBTyxDQUFDLEdBQVIsQ0FBWSxHQUFaLEVBQWlCLE1BQWpCO0FBQ0Esa0JBQUEsVUFBVSxDQUFDLE9BQVg7QUFDQSxrQkFBQSxJQUFJO0FBQ0osaUJBSkQ7O0FBREU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsT0FKSDs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVlBLEdBYkMsQ0FBRjtBQWVBLENBakJPLENBQVI7Ozs7Ozs7Ozs7OzBCQUpBLFUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgb3JhY2xlZGIgZnJvbSAnb3JhY2xlZGInXG5cbmltcG9ydCAnYmFiZWwtcG9seWZpbGwnXG5cbmRlc2NyaWJlKCdPcmFjbGUgZGIgY29ubmVjdGlvbicsICgpPT57XG5cdFxuXHRpdCgnY29ubmVjdCcsIChkb25lKT0+e1xuXHRcdG9yYWNsZWRiLmdldENvbm5lY3Rpb24oe1xuXHRcdFx0dXNlcjogJ3Rlc3RlcicsXG5cdFx0XHRwYXNzd29yZDogJzEyMzQnLFxuXHRcdFx0Y29ubmVjdFN0cmluZzogJzE3Mi4xOC4wLjI6MTUyMS94ZScgXG5cdFx0fSwgYXN5bmMgKGVyciwgY29ubmVjdGlvbik9Pntcblx0XHRcdGNvbm5lY3Rpb24uZXhlY3V0ZSgnc2VsZWN0ICogZnJvbSBkdWFsJywgW10sIChlcnIscmVzdWx0KT0+e1xuXHRcdFx0XHRjb25zb2xlLmxvZyhlcnIsIHJlc3VsdClcblx0XHRcdFx0Y29ubmVjdGlvbi5yZWxlYXNlKClcblx0XHRcdFx0ZG9uZSgpXG5cdFx0XHR9KVx0XG5cdFx0XHRcblx0XHR9KVxuXHR9KVxuXG59KSJdfQ==

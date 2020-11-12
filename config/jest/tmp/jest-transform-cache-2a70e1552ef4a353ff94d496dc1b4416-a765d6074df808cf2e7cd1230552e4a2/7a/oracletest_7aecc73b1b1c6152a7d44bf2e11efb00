@@ -1,0 +1,105 @@
+c15dcbe07378674cf813db1418f8de50
+"use strict";
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n\t\t\tquery lectures {\n\t\t\t\tcotent_no\n\t\t\t}\n\t\t"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n\t\t\t\tquery GetRates {\n\t\t\t\t\trates(currency: \"USD\") {\n\t\t\t\t\tcurrency\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+}); //bootstrap
+
+var bootstrap_1 = require("@server/bootstrap");
+
+var env_1 = require("@config/env");
+
+var client_1 = require("@apollo/client");
+
+require("babel-polyfill"); // beforeAll(async ()=>{
+// })
+
+
+describe('Oracle db connection', function () {
+  it('connect', /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(done) {
+      var _yield$bootstrap_1$Co, _yield$bootstrap_1$Co2, app, apollo, client, LECUTRE;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return bootstrap_1.Container.getValue(env_1.ENVKEY.SERVER.EXPRESS.APP)();
+
+            case 2:
+              _yield$bootstrap_1$Co = _context.sent;
+              _yield$bootstrap_1$Co2 = _slicedToArray(_yield$bootstrap_1$Co, 2);
+              app = _yield$bootstrap_1$Co2[0];
+              apollo = _yield$bootstrap_1$Co2[1];
+              client = new client_1.ApolloClient({
+                uri: 'https://48p1r2roz4.sse.codesandbox.io',
+                cache: new client_1.InMemoryCache()
+              });
+              _context.next = 9;
+              return client.query({
+                query: client_1.gql(_templateObject()),
+                variables: {}
+              }).then(function (result) {
+                return console.log(result);
+              });
+
+            case 9:
+              LECUTRE = client_1.gql(_templateObject2());
+
+            case 10:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }(), 20000);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3Rlc3Qvc2VydmVyL29yYWNsZS50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFBQTs7QUFDQSxJQUFBLFdBQUEsR0FBQSxPQUFBLENBQUEsbUJBQUEsQ0FBQTs7QUFDQSxJQUFBLEtBQUEsR0FBQSxPQUFBLENBQUEsYUFBQSxDQUFBOztBQUlBLElBQUEsUUFBQSxHQUFBLE9BQUEsQ0FBQSxnQkFBQSxDQUFBOztBQUNBLE9BQUEsQ0FBQSxnQkFBQSxDQUFBLEMsQ0FFQTtBQUVBOzs7QUFHQSxRQUFRLENBQUMsc0JBQUQsRUFBeUIsWUFBSTtBQUVwQyxFQUFBLEVBQUUsQ0FBQyxTQUFEO0FBQUEsdUVBQVksaUJBQU8sSUFBUDtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFDdUMsV0FBQSxDQUFBLFNBQUEsQ0FBVSxRQUFWLENBQW1CLEtBQUEsQ0FBQSxNQUFBLENBQU8sTUFBUCxDQUFjLE9BQWQsQ0FBc0IsR0FBekMsR0FEdkM7O0FBQUE7QUFBQTtBQUFBO0FBQ04sY0FBQSxHQURNO0FBQ0QsY0FBQSxNQURDO0FBRVAsY0FBQSxNQUZPLEdBRUUsSUFBSSxRQUFBLENBQUEsWUFBSixDQUFpQjtBQUMvQixnQkFBQSxHQUFHLEVBQUUsdUNBRDBCO0FBRS9CLGdCQUFBLEtBQUssRUFBRSxJQUFJLFFBQUEsQ0FBQSxhQUFKO0FBRndCLGVBQWpCLENBRkY7QUFBQTtBQUFBLHFCQU1QLE1BQU0sQ0FDWCxLQURLLENBQ0M7QUFDTixnQkFBQSxLQUFLLEVBQUUsUUFBQSxDQUFBLEdBQUYsbUJBREM7QUFTTixnQkFBQSxTQUFTLEVBQUU7QUFUTCxlQURELEVBY0wsSUFkSyxDQWNBLFVBQUEsTUFBTTtBQUFBLHVCQUFJLE9BQU8sQ0FBQyxHQUFSLENBQVksTUFBWixDQUFKO0FBQUEsZUFkTixDQU5POztBQUFBO0FBcUJQLGNBQUEsT0FyQk8sR0FxQkcsUUFBQSxDQUFBLEdBckJIOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQVo7O0FBQUE7QUFBQTtBQUFBO0FBQUEsT0EyQkMsS0EzQkQsQ0FBRjtBQTZCQSxDQS9CTyxDQUFSIiwic291cmNlc0NvbnRlbnQiOlsiLy9ib290c3RyYXBcbmltcG9ydCB7IENvbnRhaW5lciB9IGZyb20gJ0BzZXJ2ZXIvYm9vdHN0cmFwJ1xuaW1wb3J0IHsgRU5WS0VZIH0gZnJvbSAnQGNvbmZpZy9lbnYnXG4vL21vZHVsZVxuaW1wb3J0IHsgRXhwcmVzcyB9IGZyb20gJ2V4cHJlc3MnXG5pbXBvcnQgeyBBcG9sbG9TZXJ2ZXIgfSBmcm9tICdAYXBvbGxvL3NlcnZlcidcbmltcG9ydCB7IEFwb2xsb0NsaWVudCwgSW5NZW1vcnlDYWNoZSwgZ3FsIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnXG5pbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJ1xuXG4vLyBiZWZvcmVBbGwoYXN5bmMgKCk9Pntcblx0XG4vLyB9KVxuXG5cbmRlc2NyaWJlKCdPcmFjbGUgZGIgY29ubmVjdGlvbicsICgpPT57XG5cdFxuXHRpdCgnY29ubmVjdCcsIGFzeW5jIChkb25lKT0+e1xuXHRcdGNvbnN0IFthcHAsIGFwb2xsb106W0V4cHJlc3MsIEFwb2xsb1NlcnZlcl0gPSBhd2FpdCBDb250YWluZXIuZ2V0VmFsdWUoRU5WS0VZLlNFUlZFUi5FWFBSRVNTLkFQUCkoKVxuXHRcdGNvbnN0IGNsaWVudCA9IG5ldyBBcG9sbG9DbGllbnQoe1xuXHRcdFx0dXJpOiAnaHR0cHM6Ly80OHAxcjJyb3o0LnNzZS5jb2Rlc2FuZGJveC5pbycsXG5cdFx0XHRjYWNoZTogbmV3IEluTWVtb3J5Q2FjaGUoKVxuXHRcdH0pO1x0XHRcblx0XHRhd2FpdCBjbGllbnRcblx0XHQucXVlcnkoe1xuXHRcdFx0cXVlcnk6IGdxbGBcblx0XHRcdFx0cXVlcnkgR2V0UmF0ZXMge1xuXHRcdFx0XHRcdHJhdGVzKGN1cnJlbmN5OiBcIlVTRFwiKSB7XG5cdFx0XHRcdFx0Y3VycmVuY3lcblx0XHRcdFx0XHR9XG5cdFx0XHRcdH1cblx0XHRcdGBcblx0XHRcdCxcblx0XHRcdHZhcmlhYmxlczoge1xuXHRcdFx0XHRcblx0XHRcdH1cblx0XHR9KVxuXHRcdC50aGVuKHJlc3VsdCA9PiBjb25zb2xlLmxvZyhyZXN1bHQpKTtcblx0XHRjb25zdCBMRUNVVFJFID0gZ3FsYFxuXHRcdFx0cXVlcnkgbGVjdHVyZXMge1xuXHRcdFx0XHRjb3RlbnRfbm9cblx0XHRcdH1cblx0XHRgXG4gXHRcblx0fSwgMjAwMDApXG5cbn0pIl19

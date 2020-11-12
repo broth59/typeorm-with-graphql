@@ -1,0 +1,55 @@
+f996d80b16a540d7e3c5a795f45b19fb
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var oracledb_1 = __importDefault(require("oracledb"));
+
+describe('Oracle db connection', function () {
+  it('connect', function () {
+    oracledb_1["default"].getConnection({
+      user: 'tester',
+      password: '1234',
+      connectString: 'localhost:1521/xe'
+    }, function (err, connection) {
+      console.log(err);
+    });
+  });
+});
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+  reactHotLoader.register(oracledb_1, "oracledb_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/test/server/oracle.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3Rlc3Qvc2VydmVyL29yYWNsZS50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLElBQUEsVUFBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsVUFBQSxDQUFBLENBQUE7O0FBRUEsUUFBUSxDQUFDLHNCQUFELEVBQXlCLFlBQUk7QUFFcEMsRUFBQSxFQUFFLENBQUMsU0FBRCxFQUFZLFlBQUk7QUFDakIsSUFBQSxVQUFBLFdBQUEsQ0FBUyxhQUFULENBQXVCO0FBQ3RCLE1BQUEsSUFBSSxFQUFFLFFBRGdCO0FBRXRCLE1BQUEsUUFBUSxFQUFFLE1BRlk7QUFHdEIsTUFBQSxhQUFhLEVBQUU7QUFITyxLQUF2QixFQUlHLFVBQUMsR0FBRCxFQUFNLFVBQU4sRUFBbUI7QUFDckIsTUFBQSxPQUFPLENBQUMsR0FBUixDQUFZLEdBQVo7QUFDQSxLQU5EO0FBT0EsR0FSQyxDQUFGO0FBVUEsQ0FaTyxDQUFSOzs7Ozs7Ozs7OzswQkFGQSxVIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG9yYWNsZWRiIGZyb20gJ29yYWNsZWRiJ1xuXG5kZXNjcmliZSgnT3JhY2xlIGRiIGNvbm5lY3Rpb24nLCAoKT0+e1xuXHRcblx0aXQoJ2Nvbm5lY3QnLCAoKT0+e1xuXHRcdG9yYWNsZWRiLmdldENvbm5lY3Rpb24oe1xuXHRcdFx0dXNlcjogJ3Rlc3RlcicsXG5cdFx0XHRwYXNzd29yZDogJzEyMzQnLFxuXHRcdFx0Y29ubmVjdFN0cmluZzogJ2xvY2FsaG9zdDoxNTIxL3hlJ1xuXHRcdH0sIChlcnIsIGNvbm5lY3Rpb24pPT57XG5cdFx0XHRjb25zb2xlLmxvZyhlcnIpXG5cdFx0fSlcblx0fSlcblxufSkiXX0=

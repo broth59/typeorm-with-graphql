@@ -1,0 +1,1 @@
+{"version":3,"sources":["/home/broth59/Desktop/Projects/Node/Inversify/test/server/setup/reflect-resolver.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,OAAA,CAAA,WAAA,CAAA","sourcesContent":["import 'inversify'\n"]}

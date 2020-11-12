@@ -1,0 +1,15 @@
+9b23d34af4f7edf74c469253cb52ae6c
+"use strict";
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require("inversify");
+
+console.log("sdfds");
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9zZXR1cC9yZWZsZWN0LXJlc29sdmVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSxPQUFBLENBQUEsV0FBQSxDQUFBOztBQUNBLE9BQU8sQ0FBQyxHQUFSLENBQVksT0FBWiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnaW52ZXJzaWZ5J1xuY29uc29sZS5sb2coXCJzZGZkc1wiKSJdfQ==

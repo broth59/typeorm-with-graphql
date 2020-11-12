@@ -1,0 +1,108 @@
+ead0e2793e047853a1839629eedab5fa
+"use strict";
+
+var _core = require("@emotion/core");
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+var __createBinding = void 0 && (void 0).__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = void 0 && (void 0).__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = void 0 && (void 0).__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useStore = exports.StoreProvider = exports.StoreContext = void 0;
+
+var react_1 = __importStar(require("react"));
+
+var mobx_react_1 = require("mobx-react");
+
+var RootStore_1 = __importDefault(require("@client/store/RootStore"));
+
+exports.StoreContext = react_1.createContext({});
+exports.StoreProvider = __signature__(function (_ref) {
+  var children = _ref.children;
+  var root_store = mobx_react_1.useLocalStore(function () {
+    return new RootStore_1["default"]();
+  });
+  return (0, _core.jsx)(exports.StoreContext.Provider, {
+    value: root_store
+  }, children);
+}, "useLocalStore{root_store}");
+
+function useStore() {
+  return react_1.useContext(exports.StoreContext);
+}
+
+__signature__(useStore, "useContext{}");
+
+exports.useStore = useStore;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__createBinding, "__createBinding", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(__setModuleDefault, "__setModuleDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(__importStar, "__importStar", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(__importDefault, "__importDefault", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(react_1, "react_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(RootStore_1, "RootStore_1", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+  reactHotLoader.register(useStore, "useStore", "/home/broth59/Desktop/Projects/React/JS-project-environment/src/client/context/StoreContext.tsx");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9SZWFjdC9KUy1wcm9qZWN0LWVudmlyb25tZW50L3NyYy9jbGllbnQvY29udGV4dC9TdG9yZUNvbnRleHQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxZQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUNBLElBQUEsWUFBQSxHQUFBLE9BQUEsQ0FBQSxZQUFBLENBQUE7O0FBQ0EsSUFBQSxXQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSx5QkFBQSxDQUFBLENBQUE7O0FBRWEsT0FBQSxDQUFBLFlBQUEsR0FBZSxPQUFBLENBQUEsYUFBQSxDQUF5QixFQUF6QixDQUFmO0FBT0EsT0FBQSxDQUFBLGFBQUEsaUJBQWdDLGdCQUUxQjtBQUFBLE1BRGhCLFFBQ2dCLFFBRGhCLFFBQ2dCO0FBQ2xCLE1BQU0sVUFBVSxHQUFHLFlBQUEsQ0FBQSxhQUFBLENBQWM7QUFBQSxXQUFJLElBQUksV0FBQSxXQUFKLEVBQUo7QUFBQSxHQUFkLENBQW5CO0FBRUEsU0FDQyxlQUFDLE9BQUQsQ0FBQyxZQUFELENBQWMsUUFBZDtBQUF1QixJQUFBLEtBQUssRUFBRTtBQUE5QixLQUNFLFFBREYsQ0FERDtBQUtBLENBVlk7O0FBWWIsU0FBZ0IsUUFBaEIsR0FBd0I7QUFDdkIsU0FBTyxPQUFBLENBQUEsVUFBQSxDQUFXLE9BQUEsQ0FBQSxZQUFYLENBQVA7QUFDQTs7Y0FGZSxROztBQUFoQixPQUFBLENBQUEsUUFBQSxHQUFBLFFBQUE7Ozs7Ozs7Ozs7Ozs7OzBCQXZCQSxPOzBCQUVBLFc7MEJBcUJnQixRIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IEZDLCBjcmVhdGVDb250ZXh0LCBSZWFjdE5vZGUsIFJlYWN0RWxlbWVudCwgdXNlQ29udGV4dCB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHVzZUxvY2FsU3RvcmUgfSBmcm9tICdtb2J4LXJlYWN0J1xuaW1wb3J0IFJvb3RTdG9yZSBmcm9tICdAY2xpZW50L3N0b3JlL1Jvb3RTdG9yZSdcblxuZXhwb3J0IGNvbnN0IFN0b3JlQ29udGV4dCA9IGNyZWF0ZUNvbnRleHQ8Um9vdFN0b3JlPih7fSBhcyBSb290U3RvcmUpO1xuXG5leHBvcnQgdHlwZSBTdG9yZUNvbXBvbmVudCA9IEZDPHtcbiAgc3RvcmVcdFx0OiBSb290U3RvcmU7XG4gIGNoaWxkcmVuXHQ6IFJlYWN0Tm9kZTtcbn0+O1xuXG5leHBvcnQgY29uc3QgU3RvcmVQcm92aWRlcjogU3RvcmVDb21wb25lbnQgPSAoe1xuICBcdGNoaWxkcmVuXG59KTogUmVhY3RFbGVtZW50ID0+IHtcblx0Y29uc3Qgcm9vdF9zdG9yZSA9IHVzZUxvY2FsU3RvcmUoKCk9Pm5ldyBSb290U3RvcmUoKSlcblxuXHRyZXR1cm4gKFxuXHRcdDxTdG9yZUNvbnRleHQuUHJvdmlkZXIgdmFsdWU9e3Jvb3Rfc3RvcmV9PlxuXHRcdFx0e2NoaWxkcmVufVxuXHRcdDwvU3RvcmVDb250ZXh0LlByb3ZpZGVyPlxuXHQpXG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1c2VTdG9yZSgpOlJvb3RTdG9yZSB7XG5cdHJldHVybiB1c2VDb250ZXh0KFN0b3JlQ29udGV4dClcbn0iXX0=

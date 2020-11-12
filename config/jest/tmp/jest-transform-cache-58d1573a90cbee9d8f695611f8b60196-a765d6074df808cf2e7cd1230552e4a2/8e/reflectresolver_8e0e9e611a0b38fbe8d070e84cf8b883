@@ -1,0 +1,13 @@
+47583b390dc5d1e1e3ca89be88cdd76a
+"use strict";
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require("inversify");
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9zZXR1cC9yZWZsZWN0LXJlc29sdmVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSxPQUFBLENBQUEsV0FBQSxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdpbnZlcnNpZnknXG4iXX0=
