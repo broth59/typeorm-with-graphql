@@ -2,12 +2,12 @@ import 'reflect-metadata';
 import { Container, ENVKEY, Profile } from '@config/env';
 import express, { Express } from 'express';
 import bodyParser from 'body-parser';
-import { buildSchema } from 'type-graphql';
 import { createConnection, ConnectionOptions, EntityManager } from 'typeorm';
+import { buildSchema } from 'type-graphql';
 import { ApolloServer } from 'apollo-server-express';
 
-import Entities from '@interface/entity';
 import Resolvers from '@server/graphql/resolver';
+import Entities from '@interface/entity';
 import * as Routes from '@server/router';
 
 const DB_CONFIG = Container.getValue(ENVKEY.SERVER.DB_CONFIG);
@@ -24,18 +24,23 @@ Container.bindName(ENVKEY.SERVER.EXPRESS.APP).to(async () => {
         entities: Entities,
     } as ConnectionOptions);
 
+    const schema = await buildSchema({
+        resolvers: Resolvers,
+        nullableByDefault: true,
+    } as any);
+
+    const apollo_server = new ApolloServer({
+        schema: schema,
+        context: () => {
+            return {
+                db: db_connection.manager,
+            };
+        },
+    });
+
+    apollo_server.applyMiddleware({ app });
+
     connectRouter(app, db_connection.manager);
-
-    // const schema = await buildSchema({
-    //     resolvers: Resolvers,
-    //     nullableByDefault: true,
-    // } as any);
-    // const apollo_server = new ApolloServer({
-    //     schema,
-    //     context: { manager: db_connection.manager },
-    // });
-
-    // apollo_server.applyMiddleware({ app });
 
     return [app];
 });

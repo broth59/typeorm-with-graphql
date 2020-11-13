@@ -2,11 +2,14 @@
 #유저 목록 조회
 GET http://localhost:3020/users
 ###
+#유저 사진 목록조회
+GET http://localhost:3020/users/photos
+###
 #단일 유저 조회
 GET http://localhost:3020/users/broth59
 ###
-#유저 사진 목록 조회
-GET http://localhost:3020/users/broth59/photo
+#단일 유저 사진 조회
+GET http://localhost:3020/users/broth59/photos
 
 
 ###
@@ -16,23 +19,11 @@ Content-Type: application/json
 
 {
 	"id": "broth59",
-	"email": "broth59@naver.com"
-}
-
-
-###
-#유저 수정
-PATCH http://localhost:3020/users
-Content-Type: application/json
-
-{
-	"id": "broth59",
-	"email": "broth59@naver.com2",
+	"email": "broth59@naver.com",
 	"photo": {
-		"image_path" : "s6"
+		"image_path" : "s8"
 	}
 }
-
 
 ###
 #유저 삭제
@@ -40,6 +31,7 @@ DELETE http://localhost:3020/users
 Content-Type: application/json
 
 {
-	"id": "broth57",
+	"id": "broth60",
 	"email": "broth59@naver.com"
 }
+###

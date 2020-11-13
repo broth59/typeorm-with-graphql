@@ -20,7 +20,7 @@ compiler.watch({ poll: 500 }, (err, stats) => {
         console.log(stats_info.errors.join('\n').red);
     }
     if (stats.hasWarnings()) {
-        console.log(stats_info.warnings.join('\n').red);
+        console.log(stats_info.warnings.join('\n').yellow);
     }
 });
 

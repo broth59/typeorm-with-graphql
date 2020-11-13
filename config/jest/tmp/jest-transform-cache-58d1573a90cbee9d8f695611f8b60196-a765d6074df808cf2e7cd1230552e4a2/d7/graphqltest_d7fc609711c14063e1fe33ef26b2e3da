@@ -1,0 +1,138 @@
+330f9523c1312503de03cbe4d6eb3563
+"use strict";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n            query single($id: id) {\n                user(id: $id) {\n                    id\n                    email\n                    photo {\n                        image_path\n                    }\n                }\n            }\n        "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n            query list {\n                users {\n                    id\n                    email\n                    photo {\n                        image_path\n                    }\n                }\n            }\n        "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var client_1 = require("@apollo/client");
+
+require("cross-fetch/polyfill");
+
+require("babel-polyfill");
+
+var client = new client_1.ApolloClient({
+  uri: 'http://localhost:3020/graphql',
+  cache: new client_1.InMemoryCache()
+});
+it('Server return list', /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(done) {
+    var _yield$client$query, data, error;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return client.query({
+              query: client_1.gql(_templateObject())
+            });
+
+          case 2:
+            _yield$client$query = _context.sent;
+            data = _yield$client$query.data;
+            error = _yield$client$query.error;
+            expect(data.users).toBeTruthy();
+            done();
+
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}(), 10000);
+it.only('Server return single', /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(done) {
+    var _yield$client$query2, data, error;
+
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return client.query({
+              query: client_1.gql(_templateObject2()),
+              variables: {
+                id: 'broth59'
+              }
+            });
+
+          case 2:
+            _yield$client$query2 = _context2.sent;
+            data = _yield$client$query2.data;
+            error = _yield$client$query2.error;
+            expect(data).toBeTruthy();
+            done();
+
+          case 7:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x2) {
+    return _ref2.apply(this, arguments);
+  };
+}(), 10000);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(client, "client", "/home/broth59/Desktop/Projects/Node/Inversify/test/server/graphql.test.ts");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9ncmFwaHFsLnRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFFBQUEsR0FBQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsc0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFFQSxJQUFNLE1BQU0sR0FBRyxJQUFJLFFBQUEsQ0FBQSxZQUFKLENBQWlCO0FBQzVCLEVBQUEsR0FBRyxFQUFFLCtCQUR1QjtBQUU1QixFQUFBLEtBQUssRUFBRSxJQUFJLFFBQUEsQ0FBQSxhQUFKO0FBRnFCLENBQWpCLENBQWY7QUFLQSxFQUFFLENBQUMsb0JBQUQ7QUFBQSxxRUFBdUIsaUJBQU8sSUFBUDtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFDUyxNQUFNLENBQUMsS0FBUCxDQUFhO0FBQ3ZDLGNBQUEsS0FBSyxFQUFFLFFBQUEsQ0FBQSxHQUFGO0FBRGtDLGFBQWIsQ0FEVDs7QUFBQTtBQUFBO0FBQ2IsWUFBQSxJQURhLHVCQUNiLElBRGE7QUFDUCxZQUFBLEtBRE8sdUJBQ1AsS0FETztBQWNyQixZQUFBLE1BQU0sQ0FBQyxJQUFJLENBQUMsS0FBTixDQUFOLENBQW1CLFVBQW5CO0FBRUEsWUFBQSxJQUFJOztBQWhCaUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FBdkI7O0FBQUE7QUFBQTtBQUFBO0FBQUEsS0FpQkMsS0FqQkQsQ0FBRjtBQW1CQSxFQUFFLENBQUMsSUFBSCxDQUFRLHNCQUFSO0FBQUEsc0VBQWdDLGtCQUFPLElBQVA7QUFBQTs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQ0UsTUFBTSxDQUFDLEtBQVAsQ0FBYTtBQUN2QyxjQUFBLEtBQUssRUFBRSxRQUFBLENBQUEsR0FBRixvQkFEa0M7QUFZdkMsY0FBQSxTQUFTLEVBQUU7QUFBRSxnQkFBQSxFQUFFLEVBQUU7QUFBTjtBQVo0QixhQUFiLENBREY7O0FBQUE7QUFBQTtBQUNwQixZQUFBLElBRG9CLHdCQUNwQixJQURvQjtBQUNkLFlBQUEsS0FEYyx3QkFDZCxLQURjO0FBZTVCLFlBQUEsTUFBTSxDQUFDLElBQUQsQ0FBTixDQUFhLFVBQWI7QUFFQSxZQUFBLElBQUk7O0FBakJ3QjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxHQUFoQzs7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQWtCRyxLQWxCSDs7Ozs7Ozs7OzswQkF4Qk0sTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFwb2xsb0NsaWVudCwgSW5NZW1vcnlDYWNoZSwgZ3FsIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnO1xuaW1wb3J0ICdjcm9zcy1mZXRjaC9wb2x5ZmlsbCc7XG5pbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJztcblxuY29uc3QgY2xpZW50ID0gbmV3IEFwb2xsb0NsaWVudCh7XG4gICAgdXJpOiAnaHR0cDovL2xvY2FsaG9zdDozMDIwL2dyYXBocWwnLFxuICAgIGNhY2hlOiBuZXcgSW5NZW1vcnlDYWNoZSgpLFxufSk7XG5cbml0KCdTZXJ2ZXIgcmV0dXJuIGxpc3QnLCBhc3luYyAoZG9uZSkgPT4ge1xuICAgIGNvbnN0IHsgZGF0YSwgZXJyb3IgfSA9IGF3YWl0IGNsaWVudC5xdWVyeSh7XG4gICAgICAgIHF1ZXJ5OiBncWxgXG4gICAgICAgICAgICBxdWVyeSBsaXN0IHtcbiAgICAgICAgICAgICAgICB1c2VycyB7XG4gICAgICAgICAgICAgICAgICAgIGlkXG4gICAgICAgICAgICAgICAgICAgIGVtYWlsXG4gICAgICAgICAgICAgICAgICAgIHBob3RvIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGltYWdlX3BhdGhcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgYCxcbiAgICB9KTtcbiAgICBleHBlY3QoZGF0YS51c2VycykudG9CZVRydXRoeSgpO1xuXG4gICAgZG9uZSgpO1xufSwgMTAwMDApO1xuXG5pdC5vbmx5KCdTZXJ2ZXIgcmV0dXJuIHNpbmdsZScsIGFzeW5jIChkb25lKSA9PiB7XG4gICAgY29uc3QgeyBkYXRhLCBlcnJvciB9ID0gYXdhaXQgY2xpZW50LnF1ZXJ5KHtcbiAgICAgICAgcXVlcnk6IGdxbGBcbiAgICAgICAgICAgIHF1ZXJ5IHNpbmdsZSgkaWQ6IGlkKSB7XG4gICAgICAgICAgICAgICAgdXNlcihpZDogJGlkKSB7XG4gICAgICAgICAgICAgICAgICAgIGlkXG4gICAgICAgICAgICAgICAgICAgIGVtYWlsXG4gICAgICAgICAgICAgICAgICAgIHBob3RvIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGltYWdlX3BhdGhcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgYCxcbiAgICAgICAgdmFyaWFibGVzOiB7IGlkOiAnYnJvdGg1OScgfSxcbiAgICB9KTtcbiAgICBleHBlY3QoZGF0YSkudG9CZVRydXRoeSgpO1xuXG4gICAgZG9uZSgpO1xufSwgMTAwMDApO1xuIl19

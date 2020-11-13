@@ -1,0 +1,71 @@
+7f6ace1145bb666b882d806525ae3ca5
+"use strict";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n            query list {\n                users {\n                    id\n                    email\n                    photo {\n                        image_path\n                    }\n                }\n            }\n        "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var client_1 = require("@apollo/client");
+
+require("cross-fetch/polyfill");
+
+require("babel-polyfill");
+
+it('Server return vaule', /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(done) {
+    var client, _yield$client$query, data, error;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            client = new client_1.ApolloClient({
+              uri: 'http://localhost:3020/graphql',
+              cache: new client_1.InMemoryCache()
+            });
+            _context.next = 3;
+            return client.query({
+              query: client_1.gql(_templateObject())
+            });
+
+          case 3:
+            _yield$client$query = _context.sent;
+            data = _yield$client$query.data;
+            error = _yield$client$query.error;
+            expect(data).toBeTruthy();
+            console.log(data);
+            done();
+
+          case 9:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}(), 10000);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9ncmFwaHFsLnRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFFBQUEsR0FBQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsc0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFFQSxFQUFFLENBQUMscUJBQUQ7QUFBQSxxRUFBd0IsaUJBQU8sSUFBUDtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ2hCLFlBQUEsTUFEZ0IsR0FDUCxJQUFJLFFBQUEsQ0FBQSxZQUFKLENBQWlCO0FBQzVCLGNBQUEsR0FBRyxFQUFFLCtCQUR1QjtBQUU1QixjQUFBLEtBQUssRUFBRSxJQUFJLFFBQUEsQ0FBQSxhQUFKO0FBRnFCLGFBQWpCLENBRE87QUFBQTtBQUFBLG1CQU1RLE1BQU0sQ0FBQyxLQUFQLENBQWE7QUFDdkMsY0FBQSxLQUFLLEVBQUUsUUFBQSxDQUFBLEdBQUY7QUFEa0MsYUFBYixDQU5SOztBQUFBO0FBQUE7QUFNZCxZQUFBLElBTmMsdUJBTWQsSUFOYztBQU1SLFlBQUEsS0FOUSx1QkFNUixLQU5RO0FBbUJ0QixZQUFBLE1BQU0sQ0FBQyxJQUFELENBQU4sQ0FBYSxVQUFiO0FBQ0EsWUFBQSxPQUFPLENBQUMsR0FBUixDQUFZLElBQVo7QUFFQSxZQUFBLElBQUk7O0FBdEJrQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxHQUF4Qjs7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQXVCQyxLQXZCRCxDQUFGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQXBvbGxvQ2xpZW50LCBJbk1lbW9yeUNhY2hlLCBncWwgfSBmcm9tICdAYXBvbGxvL2NsaWVudCc7XG5pbXBvcnQgJ2Nyb3NzLWZldGNoL3BvbHlmaWxsJztcbmltcG9ydCAnYmFiZWwtcG9seWZpbGwnO1xuXG5pdCgnU2VydmVyIHJldHVybiB2YXVsZScsIGFzeW5jIChkb25lKSA9PiB7XG4gICAgY29uc3QgY2xpZW50ID0gbmV3IEFwb2xsb0NsaWVudCh7XG4gICAgICAgIHVyaTogJ2h0dHA6Ly9sb2NhbGhvc3Q6MzAyMC9ncmFwaHFsJyxcbiAgICAgICAgY2FjaGU6IG5ldyBJbk1lbW9yeUNhY2hlKCksXG4gICAgfSk7XG5cbiAgICBjb25zdCB7IGRhdGEsIGVycm9yIH0gPSBhd2FpdCBjbGllbnQucXVlcnkoe1xuICAgICAgICBxdWVyeTogZ3FsYFxuICAgICAgICAgICAgcXVlcnkgbGlzdCB7XG4gICAgICAgICAgICAgICAgdXNlcnMge1xuICAgICAgICAgICAgICAgICAgICBpZFxuICAgICAgICAgICAgICAgICAgICBlbWFpbFxuICAgICAgICAgICAgICAgICAgICBwaG90byB7XG4gICAgICAgICAgICAgICAgICAgICAgICBpbWFnZV9wYXRoXG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIGAsXG4gICAgfSk7XG4gICAgZXhwZWN0KGRhdGEpLnRvQmVUcnV0aHkoKTtcbiAgICBjb25zb2xlLmxvZyhkYXRhKTtcblxuICAgIGRvbmUoKTtcbn0sIDEwMDAwKTtcbiJdfQ==

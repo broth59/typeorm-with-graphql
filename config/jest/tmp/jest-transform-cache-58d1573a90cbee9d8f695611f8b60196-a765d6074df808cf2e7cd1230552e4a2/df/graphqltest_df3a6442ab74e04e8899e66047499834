@@ -1,0 +1,68 @@
+d0b18c4bf9d1cce7852f9b3e0c8fc1e5
+"use strict";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n            query list {\n                users {\n                    id\n                    email\n                    photo {\n                        image_path\n                    }\n                }\n            }\n        "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var client_1 = require("@apollo/client");
+
+require("cross-fetch/polyfill");
+
+require("babel-polyfill");
+
+it('Server return vaule', /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(done) {
+    var client, result;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            client = new client_1.ApolloClient({
+              uri: 'http://localhost:3020/graphql',
+              cache: new client_1.InMemoryCache()
+            });
+            _context.next = 3;
+            return client.query({
+              query: client_1.gql(_templateObject())
+            });
+
+          case 3:
+            result = _context.sent;
+            expect(result).toBeTruthy();
+            console.log(result);
+            done();
+
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}(), 10000);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9ncmFwaHFsLnRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLFFBQUEsR0FBQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsc0JBQUEsQ0FBQTs7QUFDQSxPQUFBLENBQUEsZ0JBQUEsQ0FBQTs7QUFFQSxFQUFFLENBQUMscUJBQUQ7QUFBQSxxRUFBd0IsaUJBQU8sSUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDaEIsWUFBQSxNQURnQixHQUNQLElBQUksUUFBQSxDQUFBLFlBQUosQ0FBaUI7QUFDNUIsY0FBQSxHQUFHLEVBQUUsK0JBRHVCO0FBRTVCLGNBQUEsS0FBSyxFQUFFLElBQUksUUFBQSxDQUFBLGFBQUo7QUFGcUIsYUFBakIsQ0FETztBQUFBO0FBQUEsbUJBTUQsTUFBTSxDQUFDLEtBQVAsQ0FBYTtBQUM5QixjQUFBLEtBQUssRUFBRSxRQUFBLENBQUEsR0FBRjtBQUR5QixhQUFiLENBTkM7O0FBQUE7QUFNaEIsWUFBQSxNQU5nQjtBQW1CdEIsWUFBQSxNQUFNLENBQUMsTUFBRCxDQUFOLENBQWUsVUFBZjtBQUNBLFlBQUEsT0FBTyxDQUFDLEdBQVIsQ0FBWSxNQUFaO0FBRUEsWUFBQSxJQUFJOztBQXRCa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FBeEI7O0FBQUE7QUFBQTtBQUFBO0FBQUEsS0F1QkMsS0F2QkQsQ0FBRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFwb2xsb0NsaWVudCwgSW5NZW1vcnlDYWNoZSwgZ3FsIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnO1xuaW1wb3J0ICdjcm9zcy1mZXRjaC9wb2x5ZmlsbCc7XG5pbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJztcblxuaXQoJ1NlcnZlciByZXR1cm4gdmF1bGUnLCBhc3luYyAoZG9uZSkgPT4ge1xuICAgIGNvbnN0IGNsaWVudCA9IG5ldyBBcG9sbG9DbGllbnQoe1xuICAgICAgICB1cmk6ICdodHRwOi8vbG9jYWxob3N0OjMwMjAvZ3JhcGhxbCcsXG4gICAgICAgIGNhY2hlOiBuZXcgSW5NZW1vcnlDYWNoZSgpLFxuICAgIH0pO1xuXG4gICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgY2xpZW50LnF1ZXJ5KHtcbiAgICAgICAgcXVlcnk6IGdxbGBcbiAgICAgICAgICAgIHF1ZXJ5IGxpc3Qge1xuICAgICAgICAgICAgICAgIHVzZXJzIHtcbiAgICAgICAgICAgICAgICAgICAgaWRcbiAgICAgICAgICAgICAgICAgICAgZW1haWxcbiAgICAgICAgICAgICAgICAgICAgcGhvdG8ge1xuICAgICAgICAgICAgICAgICAgICAgICAgaW1hZ2VfcGF0aFxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICBgLFxuICAgIH0pO1xuICAgIGV4cGVjdChyZXN1bHQpLnRvQmVUcnV0aHkoKTtcbiAgICBjb25zb2xlLmxvZyhyZXN1bHQpO1xuXG4gICAgZG9uZSgpO1xufSwgMTAwMDApO1xuIl19

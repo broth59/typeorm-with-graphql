@@ -1,5 +1,4 @@
-// import { LectureMasterResolver } from './lecture/LectureMasterResolver';
-// import { LectureResolver } from './lecture/LectureResolver';
-// import { UserResolver } from './user/UserResolver';
+import { UserResolver } from './user/UserResolver';
+import { UserFieldResolver } from './user/UserFieldResolver';
 
-export default [];
+export default [UserResolver, UserFieldResolver];

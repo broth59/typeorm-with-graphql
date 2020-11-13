@@ -1,27 +1,50 @@
-import { Resolver, Arg, Ctx, Query, Mutation } from 'type-graphql';
+import { Resolver, Ctx, Query, Arg, Mutation } from 'type-graphql';
 import ResolverContext from '../../type/ResolverContext';
-import UserEntity, { UserInput } from '@interface/entity/UserEntity';
+import UserEntity from '@interface/entity/UserEntity';
+import PhotoEntity from '@interface/entity/PhotoEntity';
+import { EntityManager, Transaction, TransactionManager } from 'typeorm';
 
-@Resolver(() => UserEntity)
+@Resolver()
 export class UserResolver {
-    @Query(() => UserEntity, { nullable: false })
+    @Query(() => UserEntity)
     async user(
         @Ctx() ctx: ResolverContext,
-        @Arg('email', { nullable: true }) email: string
+        @Arg('id') id: string
     ): Promise<UserEntity | undefined> {
-        const repository = ctx.db.getRepository(UserEntity);
-        const [user] = await repository.find({ where: { email } });
-        return user;
+        const user_repository = ctx.db.getRepository(UserEntity);
+        return user_repository.findOne({ where: { id } });
     }
 
-    @Mutation(() => UserEntity, { nullable: true })
-    async login(
+    @Query(() => [UserEntity])
+    async users(
+        @Ctx() ctx: ResolverContext
+    ): Promise<UserEntity[] | undefined> {
+        const user_repository = ctx.db.getRepository(UserEntity);
+        return user_repository.find();
+    }
+
+    @Transaction()
+    @Mutation(() => UserEntity)
+    async addUser(
+        @TransactionManager() db: EntityManager,
         @Ctx() ctx: ResolverContext,
-        @Arg('payload', { nullable: false }) payload: UserInput
+        @Arg('id') id: string,
+        @Arg('email') email: string,
+        @Arg('image_path') image_path: string
     ): Promise<UserEntity | undefined> {
-        const repository = ctx.db.getRepository(UserEntity);
-        const new_user = UserEntity.of(payload);
-        return repository.save(new_user);
+        const transaction_user_repository = db.getRepository(UserEntity);
+        const transaction_photo_repository = db.getRepository(PhotoEntity);
+
+        const user_entity = UserEntity.of({ id, email });
+        const photo_entity = PhotoEntity.of({ image_path });
+
+        const photo = await transaction_photo_repository.save(photo_entity);
+
+        user_entity.photo_no = photo.photo_no;
+        user_entity.photo = photo;
+        const user = await transaction_user_repository.save(user_entity);
+
+        return user;
     }
 }
 

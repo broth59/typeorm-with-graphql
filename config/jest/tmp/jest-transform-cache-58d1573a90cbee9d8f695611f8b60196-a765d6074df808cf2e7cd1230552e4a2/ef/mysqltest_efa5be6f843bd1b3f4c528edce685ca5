@@ -1,0 +1,21 @@
+8972a588bd2b847486f53b1e319e6db3
+"use strict"; // import mysql from 'mysql';
+// import 'babel-polyfill';
+// it('create connection', async (done) => {
+//     const connection = mysql.createConnection({
+//         host: 'localhost',
+//         user: 'mysql_user',
+//         password: 'mysql_password',
+//         database: 'visitlog',
+//         port: 3306,
+//     });
+//     connection.connect((error, db) => {
+//         expect(error).toBeFalsy();
+//         done();
+//     });
+// });
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9teXNxbC50ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJjQUFBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi8vIGltcG9ydCBteXNxbCBmcm9tICdteXNxbCc7XG4vLyBpbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJztcblxuLy8gaXQoJ2NyZWF0ZSBjb25uZWN0aW9uJywgYXN5bmMgKGRvbmUpID0+IHtcbi8vICAgICBjb25zdCBjb25uZWN0aW9uID0gbXlzcWwuY3JlYXRlQ29ubmVjdGlvbih7XG4vLyAgICAgICAgIGhvc3Q6ICdsb2NhbGhvc3QnLFxuLy8gICAgICAgICB1c2VyOiAnbXlzcWxfdXNlcicsXG4vLyAgICAgICAgIHBhc3N3b3JkOiAnbXlzcWxfcGFzc3dvcmQnLFxuLy8gICAgICAgICBkYXRhYmFzZTogJ3Zpc2l0bG9nJyxcbi8vICAgICAgICAgcG9ydDogMzMwNixcbi8vICAgICB9KTtcblxuLy8gICAgIGNvbm5lY3Rpb24uY29ubmVjdCgoZXJyb3IsIGRiKSA9PiB7XG4vLyAgICAgICAgIGV4cGVjdChlcnJvcikudG9CZUZhbHN5KCk7XG4vLyAgICAgICAgIGRvbmUoKTtcbi8vICAgICB9KTtcbi8vIH0pO1xuIl19

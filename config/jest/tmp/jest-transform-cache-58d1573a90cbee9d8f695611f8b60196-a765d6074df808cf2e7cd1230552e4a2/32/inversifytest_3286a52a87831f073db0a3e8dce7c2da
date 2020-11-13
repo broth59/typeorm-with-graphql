@@ -1,0 +1,56 @@
+559e477572b0bc910b2721d0e780a1ed
+"use strict"; // import 'reflect-metadata';
+// import { injectable, Container } from 'inversify';
+// @injectable()
+// class Katana {
+//     shapness = 'pupple';
+//     public hit() {
+//         return 'cut!';
+//     }
+// }
+// @injectable()
+// class Ninja implements Ninja {
+//     public katana: Katana;
+//     public constructor(katana: Katana) {
+//         this.katana = katana;
+//     }
+//     public fight() {
+//         return this.katana.hit();
+//     }
+// }
+// let container = new Container();
+// afterEach(() => {
+//     container = new Container();
+// });
+// describe('Inversify bind', () => {
+//     it('bind value with name', () => {
+//         container.bind('Katana').toConstantValue(new Katana());
+//         const katana = container.get<Katana>('Katana');
+//         expect(katana.shapness).toEqual('pupple');
+//     }, 10000);
+//     it('bind function which return value with name ', () => {
+//         container.bind('DynamicKatana').toDynamicValue(() => new Katana());
+//         const katana = container.get<Katana>('DynamicKatana');
+//         expect(katana.shapness).toEqual('pupple');
+//     });
+// });
+// describe('Inversify resolve', () => {
+//     it('resolve root class without bind', () => {
+//         container.bind(Katana).toSelf();
+//         const ninja = container.resolve(Ninja);
+//         expect(ninja.fight()).toEqual('cut!');
+//     }, 10000);
+//     it('fail to resolve sub dependencies automatically', () => {
+//         //Ninja has been registered, but need to bind Katana too.
+//         container.bind(Ninja).toSelf();
+//         const tryGet = () => container.get(Ninja);
+//         expect(tryGet).toThrow(
+//             'No matching bindings found for serviceIdentifier: Katana'
+//         );
+//     });
+// });
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal["default"].signature : function (a) {
+  return a;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2Jyb3RoNTkvRGVza3RvcC9Qcm9qZWN0cy9Ob2RlL0ludmVyc2lmeS90ZXN0L3NlcnZlci9pbnZlcnNpZnkudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiY0FBQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLy8gaW1wb3J0ICdyZWZsZWN0LW1ldGFkYXRhJztcbi8vIGltcG9ydCB7IGluamVjdGFibGUsIENvbnRhaW5lciB9IGZyb20gJ2ludmVyc2lmeSc7XG5cbi8vIEBpbmplY3RhYmxlKClcbi8vIGNsYXNzIEthdGFuYSB7XG4vLyAgICAgc2hhcG5lc3MgPSAncHVwcGxlJztcblxuLy8gICAgIHB1YmxpYyBoaXQoKSB7XG4vLyAgICAgICAgIHJldHVybiAnY3V0ISc7XG4vLyAgICAgfVxuLy8gfVxuXG4vLyBAaW5qZWN0YWJsZSgpXG4vLyBjbGFzcyBOaW5qYSBpbXBsZW1lbnRzIE5pbmphIHtcbi8vICAgICBwdWJsaWMga2F0YW5hOiBLYXRhbmE7XG4vLyAgICAgcHVibGljIGNvbnN0cnVjdG9yKGthdGFuYTogS2F0YW5hKSB7XG4vLyAgICAgICAgIHRoaXMua2F0YW5hID0ga2F0YW5hO1xuLy8gICAgIH1cbi8vICAgICBwdWJsaWMgZmlnaHQoKSB7XG4vLyAgICAgICAgIHJldHVybiB0aGlzLmthdGFuYS5oaXQoKTtcbi8vICAgICB9XG4vLyB9XG5cbi8vIGxldCBjb250YWluZXIgPSBuZXcgQ29udGFpbmVyKCk7XG5cbi8vIGFmdGVyRWFjaCgoKSA9PiB7XG4vLyAgICAgY29udGFpbmVyID0gbmV3IENvbnRhaW5lcigpO1xuLy8gfSk7XG5cbi8vIGRlc2NyaWJlKCdJbnZlcnNpZnkgYmluZCcsICgpID0+IHtcbi8vICAgICBpdCgnYmluZCB2YWx1ZSB3aXRoIG5hbWUnLCAoKSA9PiB7XG4vLyAgICAgICAgIGNvbnRhaW5lci5iaW5kKCdLYXRhbmEnKS50b0NvbnN0YW50VmFsdWUobmV3IEthdGFuYSgpKTtcbi8vICAgICAgICAgY29uc3Qga2F0YW5hID0gY29udGFpbmVyLmdldDxLYXRhbmE+KCdLYXRhbmEnKTtcbi8vICAgICAgICAgZXhwZWN0KGthdGFuYS5zaGFwbmVzcykudG9FcXVhbCgncHVwcGxlJyk7XG4vLyAgICAgfSwgMTAwMDApO1xuXG4vLyAgICAgaXQoJ2JpbmQgZnVuY3Rpb24gd2hpY2ggcmV0dXJuIHZhbHVlIHdpdGggbmFtZSAnLCAoKSA9PiB7XG4vLyAgICAgICAgIGNvbnRhaW5lci5iaW5kKCdEeW5hbWljS2F0YW5hJykudG9EeW5hbWljVmFsdWUoKCkgPT4gbmV3IEthdGFuYSgpKTtcbi8vICAgICAgICAgY29uc3Qga2F0YW5hID0gY29udGFpbmVyLmdldDxLYXRhbmE+KCdEeW5hbWljS2F0YW5hJyk7XG4vLyAgICAgICAgIGV4cGVjdChrYXRhbmEuc2hhcG5lc3MpLnRvRXF1YWwoJ3B1cHBsZScpO1xuLy8gICAgIH0pO1xuLy8gfSk7XG5cbi8vIGRlc2NyaWJlKCdJbnZlcnNpZnkgcmVzb2x2ZScsICgpID0+IHtcbi8vICAgICBpdCgncmVzb2x2ZSByb290IGNsYXNzIHdpdGhvdXQgYmluZCcsICgpID0+IHtcbi8vICAgICAgICAgY29udGFpbmVyLmJpbmQoS2F0YW5hKS50b1NlbGYoKTtcbi8vICAgICAgICAgY29uc3QgbmluamEgPSBjb250YWluZXIucmVzb2x2ZShOaW5qYSk7XG4vLyAgICAgICAgIGV4cGVjdChuaW5qYS5maWdodCgpKS50b0VxdWFsKCdjdXQhJyk7XG4vLyAgICAgfSwgMTAwMDApO1xuXG4vLyAgICAgaXQoJ2ZhaWwgdG8gcmVzb2x2ZSBzdWIgZGVwZW5kZW5jaWVzIGF1dG9tYXRpY2FsbHknLCAoKSA9PiB7XG4vLyAgICAgICAgIC8vTmluamEgaGFzIGJlZW4gcmVnaXN0ZXJlZCwgYnV0IG5lZWQgdG8gYmluZCBLYXRhbmEgdG9vLlxuLy8gICAgICAgICBjb250YWluZXIuYmluZChOaW5qYSkudG9TZWxmKCk7XG4vLyAgICAgICAgIGNvbnN0IHRyeUdldCA9ICgpID0+IGNvbnRhaW5lci5nZXQoTmluamEpO1xuLy8gICAgICAgICBleHBlY3QodHJ5R2V0KS50b1Rocm93KFxuLy8gICAgICAgICAgICAgJ05vIG1hdGNoaW5nIGJpbmRpbmdzIGZvdW5kIGZvciBzZXJ2aWNlSWRlbnRpZmllcjogS2F0YW5hJ1xuLy8gICAgICAgICApO1xuLy8gICAgIH0pO1xuLy8gfSk7XG4iXX0=

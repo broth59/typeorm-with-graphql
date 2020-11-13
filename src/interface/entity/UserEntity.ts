@@ -13,8 +13,15 @@ export default class UserEntity {
     @Field(() => String)
     email?: string;
 
-    @OneToOne(() => PhotoEntity, (photo) => photo.user)
-    @JoinColumn({ name: 'PHOTO_NO' })
+    @Column({ name: 'PHOTO_NO' })
+    @Field(() => Number)
+    photo_no?: number;
+
+    @OneToOne(() => PhotoEntity, (photo) => photo.user, {
+        cascade: true,
+        onDelete: 'SET NULL',
+    })
+    @JoinColumn()
     @Field(() => PhotoEntity)
     photo?: PhotoEntity;
 
@@ -22,7 +29,7 @@ export default class UserEntity {
         if (data) {
             this.id = data.id;
             this.email = data.email;
-            this.photo = data.photo;
+            this.photo_no = data.photo_no;
         }
     }
 
@@ -34,10 +41,3 @@ export default class UserEntity {
 }
 
 export { UserEntity };
-
-@InputType()
-export class UserInput implements Nullable<UserEntity> {
-    @Column()
-    @Field(() => String)
-    email?: string;
-}

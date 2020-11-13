@@ -1,11 +1,4 @@
-import {
-    Entity,
-    Column,
-    PrimaryColumn,
-    OneToOne,
-    PrimaryGeneratedColumn,
-    JoinColumn,
-} from 'typeorm';
+import { Entity, Column, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { ObjectType, Field } from 'type-graphql';
 import UserEntity from '@interface/entity/UserEntity';
 
@@ -14,27 +7,26 @@ import UserEntity from '@interface/entity/UserEntity';
 export default class PhotoEntity {
     @PrimaryGeneratedColumn({ name: 'PHOTO_NO' })
     @Field(() => Number)
-    id?: number;
+    photo_no?: number;
 
     @Column({ name: 'IMAGE_PATH' })
     @Field(() => String)
     image_path?: string;
 
-    @OneToOne(() => UserEntity, (user) => user.photo, { onDelete: 'CASCADE' })
-    @JoinColumn({ name: 'ID' })
+    @OneToOne(() => UserEntity)
     @Field(() => UserEntity)
     user?: UserEntity;
 
     constructor(data?: PhotoEntity) {
         if (data) {
-            this.id = data.id;
+            this.photo_no = data.photo_no;
             this.image_path = data.image_path;
             this.user = data.user;
         }
     }
 
     static of<T extends PhotoEntity & { [index: string]: any }>(
-        photo_entity: T
+        photo_entity?: T
     ) {
         return new PhotoEntity(photo_entity);
     }

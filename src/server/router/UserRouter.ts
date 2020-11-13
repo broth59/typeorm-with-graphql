@@ -28,9 +28,10 @@ class UserRouter {
 
     defineRouteWithURL() {
         this.router.get('/', this.getUsers.bind(this));
+        this.router.get('/photos', this.getUsersWithPhoto.bind(this));
         this.router.get('/:id', this.getUsersById.bind(this));
-        this.router.get('/:id/photo', this.getUsersWithPhoto.bind(this));
-        this.router.post('/', this.addUser.bind(this));
+        this.router.get('/:id/photos', this.getUserWithPhoto.bind(this));
+        this.router.post('/', this.addUser.bind(this) as any);
         this.router.patch('/', this.updateUser.bind(this) as any);
         this.router.delete('/', this.deleteUser.bind(this));
     }
@@ -39,12 +40,18 @@ class UserRouter {
         const user_list = await this.user_repository.find();
         res.status(200).json(user_list);
     }
+    async getUsersWithPhoto(req: Request, res: Response) {
+        const user = await this.user_repository.findOne({
+            relations: ['photo'],
+        });
+        res.status(200).json(user);
+    }
     async getUsersById(req: Request, res: Response) {
         const { id } = req.params;
         const user = await this.user_repository.findOne({ where: { id } });
         res.status(200).json(user);
     }
-    async getUsersWithPhoto(req: Request, res: Response) {
+    async getUserWithPhoto(req: Request, res: Response) {
         const { id } = req.params;
         const user = await this.user_repository.findOne({
             relations: ['photo'],
@@ -53,9 +60,24 @@ class UserRouter {
         res.status(200).json(user);
     }
     //@POST
-    async addUser(req: Request, res: Response) {
+    @Transaction()
+    async addUser(
+        req: Request,
+        res: Response,
+        @TransactionManager() db: EntityManager
+    ) {
+        const transaction_user_repository = db.getRepository(UserEntity);
+        const transaction_photo_repository = db.getRepository(PhotoEntity);
+
         const user_entity = UserEntity.of(req.body);
-        const user = await this.user_repository.save(user_entity);
+        const photo_entity = PhotoEntity.of(req.body.photo);
+
+        const photo = await transaction_photo_repository.save(photo_entity);
+
+        user_entity.photo_no = photo.photo_no;
+        user_entity.photo = photo;
+        const user = await transaction_user_repository.save(user_entity);
+
         res.status(200).json(user);
     }
     //@PATCH
@@ -65,13 +87,18 @@ class UserRouter {
         res: Response,
         @TransactionManager() db: EntityManager
     ) {
+        const transaction_user_repository = db.getRepository(UserEntity);
+        const transaction_photo_repository = db.getRepository(PhotoEntity);
+
         const user_entity = UserEntity.of(req.body);
-        const photo_entity = user_entity.photo;
-        const user = await db.save(UserEntity, user_entity);
-        if (photo_entity) {
-            photo_entity.user = user;
-            await db.save(PhotoEntity, photo_entity);
-        }
+        const photo_entity = PhotoEntity.of(req.body.photo);
+
+        const photo = await transaction_photo_repository.save(photo_entity);
+
+        user_entity.photo_no = photo.photo_no;
+        user_entity.photo = photo;
+        const user = await transaction_user_repository.save(user_entity);
+
         res.status(200).json(user);
     }
     //@DELETE
